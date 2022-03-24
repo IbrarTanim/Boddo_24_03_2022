@@ -116,16 +116,11 @@ public class FragmentPhotoBlogAllUser extends Fragment implements OnLoveListener
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                swipeRefreshLayout.setRefreshing(false);
                 getAllPhotos();
                 Data.PhotoBlogCount = 0;
                 EventBus.getDefault().post(new Event(Constants.SET_PHOTO_BLOGE_COUNT));
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        swipeRefreshLayout.setRefreshing(false);
-                        getAllPhotos();
-                    }
-                }, 2000);
+                getAllPhotos();
             }
         });
         return view;

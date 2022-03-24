@@ -27,7 +27,8 @@
     <color name="deep_yellow">#DE2076</color>
     <color name="yellow">#FEC111</color>
     <color name="admin_color">#FFC300</color>
-    <color name="menu_icon_after_click">#DE2076</color>
+    <!--<color name="menu_icon_after_click">#DE2076</color>-->
+    <color name="menu_icon_after_click">#56b04c</color>
     <color name="menu_icon_default_color">#898888</color>
     <color name="chatColorBg">#EEEDED</color>
     <color name="lottieBackground">#00000000</color>

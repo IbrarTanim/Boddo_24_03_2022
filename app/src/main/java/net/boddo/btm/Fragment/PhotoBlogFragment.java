@@ -334,13 +334,13 @@ public class PhotoBlogFragment extends Fragment implements HotlistAdapter.OnPhot
     private void showAllData(int position) {
 
         List<Hotlist> hotlistsData = Arrays.asList(hotlist);
-        Data.pd = new ProgressDialog(getContext());
-        Data.pd.setTitle("Loading...");
-        Data.pd.setMessage("Please wait for a while...");
+        //Data.pd = new ProgressDialog(getContext());
+        //Data.pd.setTitle("Loading...");
+        //Data.pd.setMessage("Please wait for a while...");
         SearchUser userProfile = new SearchUser(getContext());
         Data.otherUserId = hotlistsData.get(position).getUserId();
         userProfile.searchUserInfo();
-        Data.pd.show();
+        //Data.pd.show();
 
 
     }

@@ -220,13 +220,13 @@ public class LikeFavoriteAdepter extends RecyclerView.Adapter<LikeFavoriteAdepte
     }
 
     private void showAllData(int position) {
-        Data.pd = new ProgressDialog(context);
-        Data.pd.setTitle("Loading...");
-        Data.pd.setMessage("Please wait for a while...");
+        //Data.pd = new ProgressDialog(context);
+        //Data.pd.setTitle("Loading...");
+        //Data.pd.setMessage("Please wait for a while...");
         SearchUser userProfile = new SearchUser(context);
         Data.otherUserId = likedMeList.get(position).getUserId();
         userProfile.searchUserInfo();
-        Data.pd.show();
+        //Data.pd.show();
     }
 
 
