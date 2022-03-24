@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/content_bg_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <View
+            android:layout_width="@dimen/zero"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="0.2" />
+
+        <TextView
+            android:id="@+id/tvBackCredits"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="?attr/selectableItemBackground"
+            android:drawableLeft="@drawable/back_icon_20_26_12_2020"
+            android:drawablePadding="@dimen/fifteen"
+            android:gravity="left|center"
+            android:text="Buy credits"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty" />
+
+        <View
+            android:layout_width="@dimen/zero"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+        <LinearLayout
+            android:id="@+id/storyRlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--TODO HERE IS NEW LAYOUT-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/five"
+                    android:orientation="vertical">
+
+
+                    <!-- <View
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/zero"
+                         android:layout_weight=".5" />-->
+
+                    <TextView
+                        android:id="@+id/subscription_dialog_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/paddin_16dp"
+                        android:textColor="@color/amber_100"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlStore_1000"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <RadioGroup
+                            android:id="@+id/save_RbGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/llBuyCredit_1000"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_pas"
+                                android:button="@color/transparent"
+                                android:elevation="8dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/llBuyCredit_2000"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_pas"
+                                android:button="@color/transparent"
+                                android:elevation="8dp"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/llBuyCredit_5000"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_pas"
+                                android:button="@color/transparent"
+                                android:elevation="8dp" />
+
+
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+
+                            <LinearLayout
+                                android:id="@+id/firstClassPalupPlusFragment"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/month6_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:background="@drawable/post_select_button"
+                                    android:gravity="center"
+                                    android:text="$10"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/eighteen"
+                                    android:textStyle="normal" />
+
+
+                                <TextView
+                                    android:id="@+id/medal_textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/zero"
+                                    android:layout_weight="1.8"
+                                    android:gravity="center"
+                                    android:text="1,000 Credits"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/ten"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/ten"
+                                    android:layout_marginBottom="@dimen/ten"
+                                    android:layout_weight="0.2"
+                                    android:gravity="start|bottom"
+                                    android:textColor="@color/gray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:id="@+id/premiumClassPalupPlusFragment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@color/gray_light_light"
+                                        android:gravity="center"
+                                        android:text="$18"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/eighteen"
+                                        android:textStyle="normal" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_weight="1.8"
+                                        android:gravity="center"
+                                        android:text="2,000 Credits"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/text_size_10sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/ten"
+                                        android:layout_marginBottom="@dimen/ten"
+                                        android:layout_weight="0.2"
+                                        android:gravity="start|bottom"
+                                        android:text="Save $2"
+                                        android:textColor="@color/gray"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/plusPalupPlusFragment"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:background="@color/gray_light_light"
+                                    android:gravity="center"
+                                    android:text="$35"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/eighteen"
+                                    android:textStyle="normal" />
+
+
+                                <TextView
+                                    android:id="@+id/medal3_textView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/zero"
+                                    android:layout_weight="1.8"
+                                    android:gravity="center"
+                                    android:text="5,000 Credits"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/ten"
+                                    android:textStyle="bold" />
+
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/ten"
+                                    android:layout_marginBottom="@dimen/ten"
+                                    android:layout_weight="0.2"
+                                    android:gravity="start|bottom"
+                                    android:text="Save $15"
+                                    android:textColor="@color/gray"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/subscription_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <RadioGroup
+                            android:id="@+id/subscribe_RbGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/llBuyCredit_10000"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_pas"
+                                android:button="@color/transparent"
+                                android:elevation="8dp"
+                                android:gravity="center" />
+
+                            <RadioButton
+                                android:id="@+id/llBuyCredit_50000"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_pas"
+                                android:button="@color/transparent"
+                                android:elevation="8dp"
+                                android:textColor="@color/gray" />
+
+                            <RadioButton
+                                android:id="@+id/llBuyCredit_100000"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_pas"
+                                android:button="@color/transparent"
+                                android:elevation="8dp" />
+
+
+                        </RadioGroup>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@color/gray_light_light"
+                                        android:gravity="center"
+                                        android:text="$50"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/eighteen"
+                                        android:textStyle="normal" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_weight="1.8"
+                                        android:gravity="center"
+                                        android:text="10,000 Credits"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/ten"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_marginLeft="@dimen/ten"
+                                        android:layout_marginBottom="@dimen/ten"
+                                        android:layout_weight="0.2"
+                                        android:gravity="start|bottom"
+                                        android:text="Save $50"
+                                        android:textColor="@color/gray"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="33dp"
+                                    android:background="@drawable/priemium_select_button"
+                                    android:padding="@dimen/five"
+                                    android:text="BEST SALE"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@color/gray_light_light"
+                                        android:gravity="center"
+                                        android:text="$200"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/eighteen"
+                                        android:textStyle="normal" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_weight="1.8"
+                                        android:gravity="center"
+                                        android:text="50,000 Credits"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/ten"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_marginLeft="@dimen/ten"
+                                        android:layout_marginBottom="@dimen/ten"
+                                        android:layout_weight=".2"
+                                        android:gravity="start|bottom"
+                                        android:text="Save $300"
+                                        android:textColor="@color/gray"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:background="@color/gray_light_light"
+
+                                        android:gravity="center"
+                                        android:text="$300"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/eighteen"
+                                        android:textStyle="normal" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_weight="1.8"
+                                        android:gravity="center"
+                                        android:text="100,000 Credits"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/ten"
+                                        android:textStyle="bold" />
+
+
+                                    <TextView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/zero"
+                                        android:layout_marginStart="@dimen/ten"
+                                        android:layout_marginBottom="@dimen/ten"
+                                        android:layout_weight=".2"
+                                        android:gravity="start|bottom"
+                                        android:text="Save $700"
+                                        android:textColor="@color/gray"
+                                        android:textSize="10sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <TextView
+                        android:id="@+id/continue_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/fifty"
+                        android:layout_marginRight="@dimen/fifty"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg_green"
+                        android:gravity="center"
+                        android:text="Next"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/twenty"
+                        app:fontFamily="sans-serif-medium" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/forty"
+                android:layout_marginRight="@dimen/forty"
+                android:gravity="top|left"
+                android:text="Through Boddo credits. you can joint hotlist, access global chat rooms, unlock likes, unlock favorite, unlock visitors and many more."
+                android:textSize="@dimen/twelve" />
+
+            <!--TODO FOR NEW LAYOUT BELOW IS OLD LAYOUT-->
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="16"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <LinearLayout
+                    android:id="@+id/llBuyCredit_1000"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:layout_weight="1"
+                    android:background="@drawable/buy_credits_button_white_radious_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="at only $8"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="2"
+                        android:gravity="center|left"
+                        android:text="1,000 credits"
+                        android:textSize="@dimen/twenty" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifteen" />
+
+                <LinearLayout
+                    android:id="@+id/llBuyCredit_2000"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:layout_weight="1"
+                    android:background="@drawable/buy_credits_button_white_radious_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="at only $13"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="2"
+                        android:gravity="center|left"
+                        android:text="2,000 credits"
+                        android:textSize="@dimen/twenty" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifteen" />
+
+                <LinearLayout
+                    android:id="@+id/llBuyCredit_5000"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:layout_weight="1"
+                    android:background="@drawable/buy_credits_button_white_radious_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="at only $30"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="2"
+                        android:gravity="center|left"
+                        android:text="5,000 credits"
+                        android:textSize="@dimen/twenty" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifteen" />
+
+                <LinearLayout
+                    android:id="@+id/llBuyCredit_10000"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginLeft="@dimen/twenty"
+                    android:layout_marginRight="@dimen/twenty"
+                    android:layout_weight="1"
+                    android:background="@drawable/buy_credits_button_white_radious_bg"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="at only $40"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/ten"
+                        android:layout_weight="2"
+                        android:gravity="center|left"
+                        android:text="10,000 credits"
+                        android:textSize="@dimen/twenty" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/thirty" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginLeft="@dimen/forty"
+                    android:layout_marginRight="@dimen/forty"
+                    android:layout_weight="0.5"
+                    android:gravity="top|left"
+                    android:text="Through Boddo credits. you can joint hotlist, access global chat rooms, unlock likes, unlock favorite, unlock visitors and many more."
+                    android:textSize="@dimen/twelve" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="0.25" />
+
+                <TextView
+                    android:id="@+id/tvContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty"
+                    android:layout_marginLeft="@dimen/forty"
+                    android:layout_marginRight="@dimen/forty"
+                    android:layout_marginBottom="@dimen/twenty"
+                    android:background="@drawable/sign_in_button"
+                    android:gravity="center"
+                    android:text="Continue"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twenty" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="0.25" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

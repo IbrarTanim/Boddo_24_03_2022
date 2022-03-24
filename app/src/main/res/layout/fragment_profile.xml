@@ -1,0 +1,140 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sliding_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            sothree:umanoDragView="@+id/title_indicator_layout"
+            sothree:umanoOverlay="false"
+            sothree:umanoPanelHeight="320dp"
+            sothree:umanoParallaxOffset="100dp"
+            sothree:umanoScrollableView="@+id/indicator_layout"
+            sothree:umanoShadowHeight="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/profile_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/background_shep" />
+
+                <LinearLayout
+                    android:id="@+id/name_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_image_view"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/profile_name_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dronal Tramp @Tramp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/profile_address_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="31, Male, Califonia" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <com.rd.PageIndicatorView
+                            android:id="@+id/pageIndicatorView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            sothree:piv_animationType="drop"
+                            sothree:piv_dynamicCount="true"
+                            sothree:piv_interactiveAnimation="true"
+                            sothree:piv_selectedColor="@color/colorAccent"
+                            sothree:piv_unselectedColor="@color/Black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_image_add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/profile_image_view"
+                    android:layout_alignBottom="@+id/profile_image_view"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/ic_add_black_24dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/title_indicator_layout"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/indicator_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F3F2F2"
+                        sothree:tabGravity="fill"
+                        sothree:tabIndicatorColor="@color/colorAccent"
+                        sothree:tabMode="fixed">
+
+                    </com.google.android.material.tabs.TabLayout>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/porfile_view_Page"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

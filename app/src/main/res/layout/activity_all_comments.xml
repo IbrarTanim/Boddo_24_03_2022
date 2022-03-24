@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    android:fitsSystemWindows="true">
+    <!--android:fitsSystemWindows="true"-->
+    <!--<View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:id="@+id/back_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/content_bg_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/comment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/ten"
+            android:drawablePadding="@dimen/ten"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/back_icon_20_26_12_2020"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_layout"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!--android:layout_weight="16"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/message_layout"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/twenty" />
+
+            <!--<androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/content_bg_color" />-->
+
+            <LinearLayout
+                android:id="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/blocked_user_dialog_bag"
+                android:orientation="horizontal"
+                android:shadowColor="#E8E8E8"
+                android:shadowDx="-2"
+                android:shadowDy="-2"
+                android:shadowRadius="1">
+
+
+                <!-- <ImageView
+                     android:id="@+id/emoji_btn"
+                     android:layout_width="20dp"
+                     android:layout_height="40dp"
+                     android:layout_gravity="center_vertical"
+                     android:padding="4dp"
+                     android:background="@drawable/messagebox_shape"
+                     android:src="@drawable/smile"
+                     android:visibility="invisible" />-->
+
+                <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                    android:id="@+id/emojicon_edit_text"
+                    android:layout_width="367dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Type a comment"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/submit_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/five"
+                        android:src="@drawable/send_icon_20_03_01_2021_touch"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/submitButtonTouch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/five"
+                        android:src="@drawable/send_icon_20_03_01_2021_normal" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

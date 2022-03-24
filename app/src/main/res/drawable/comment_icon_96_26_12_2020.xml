@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M 48 1.9 C 73.4603269672 1.9 94.1 22.5396730328 94.1 48 C 94.1 73.4603269672 73.4603269672 94.1 48 94.1 C 22.5396730328 94.1 1.9 73.4603269672 1.9 48 C 1.9 22.5396730328 22.5396730328 1.9 48 1.9 Z" />
+    <path
+        android:fillColor="@color/app_color"
+        android:pathData="M30.5,65.7V37.2c0-3,2.5-5.5,5.5-5.5h26.4c3,0,5.5,2.5,5.5,5.5v17.5c0,3-2.5,5.5-5.5,5.5H38.6 l-6.2,6.2C31.7,67.2,30.5,66.6,30.5,65.7z" />
+    <path
+        android:fillColor="@color/app_color"
+        android:pathData="M49.2,42.7c-1.8,0-3.3,1.5-3.3,3.3c0,1.8,1.4,3.3,3.3,3.3c1.8,0,3.3-1.5,3.3-3.3 C52.4,44.2,51,42.7,49.2,42.7z M40.4,42.7c-1.8,0-3.3,1.5-3.3,3.3c0,1.8,1.4,3.3,3.3,3.3c1.8,0,3.3-1.5,3.3-3.3 C43.7,44.2,42.3,42.7,40.4,42.7z M57.9,42.7c-1.8,0-3.3,1.5-3.3,3.3c0,1.8,1.4,3.3,3.3,3.3s3.3-1.5,3.3-3.3 C61.2,44.2,59.8,42.7,57.9,42.7z" />
+</vector>
+
+    <!--android:fillColor="url(#XMLID_7_)"-->

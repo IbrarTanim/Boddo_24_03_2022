@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/seven"
+    app:cardCornerRadius="@dimen/ten"
+    app:cardElevation="@dimen/seven">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/ten"
+        android:padding="@dimen/ten">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ation"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:text="Take an action on this profile. Don't worry this is anonymous."
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RadioGroup
+            android:id="@+id/report_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/fifty">
+
+            <RadioButton
+                android:id="@+id/report_radio_abusive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abusive"/>
+
+            <RadioButton
+                android:id="@+id/report_radio_spam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spam"/>
+
+            <RadioButton
+                android:id="@+id/report_radio_scam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scam"/>
+
+            <RadioButton
+                android:id="@+id/report_radio_advertising"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advertising"/>
+
+            <RadioButton
+                android:id="@+id/report_radio_pornography"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pornography"/>
+
+
+            <RadioButton
+                android:id="@+id/report_radio_offense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal offence"/>
+
+
+            <RadioButton
+                android:id="@+id/report_radio_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other reason"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/report_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:layout_marginRight="@dimen/twenty_five"
+            android:layout_marginTop="@dimen/forty"
+            android:text="Submit"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/button2"/>
+
+        <Button
+            android:id="@+id/report_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/twenty_five"
+            android:layout_marginRight="@dimen/twenty_five"
+            android:layout_marginTop="@dimen/ten"
+            android:text="Cancel"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/button2" />
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

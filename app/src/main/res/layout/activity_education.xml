@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/twenty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/tvBackEducation"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/ic_close_9_6_2021"
+                android:drawablePadding="@dimen/thirty"
+                android:gravity="left|center"
+                android:text="Education"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty" />
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/five"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:text="What is your educational background?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <RadioGroup
+                    android:id="@+id/radios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/five"
+                    android:layout_weight="15"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/no_response"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="No response"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/no_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="No degree"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/special_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Special school"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/some_high_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Some high school"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/associate_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Associate degree"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/high_school_graduate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="High school graduate"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/some_college_studies"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Some college studies"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/current_college_student"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Current college student"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/bachelor_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Bachelor degree"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/master_degree"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Master degree"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/phd_md_post_doctorate"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Phd/MD/Post doctorate"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioButton
+                        android:id="@+id/other"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen"
+                        android:text="Other"
+                        android:textAppearance="?android:textAppearanceMedium" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvEducationSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_margin="@dimen/fifty"
+                    android:background="@drawable/button2"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twenty" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

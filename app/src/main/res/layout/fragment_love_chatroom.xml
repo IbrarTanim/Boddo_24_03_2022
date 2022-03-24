@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:background="@color/chatroom_bg_color"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/chat_box"
+        layout="@layout/custom_chatbox" />
+
+    <TextView
+        android:id="@+id/text_view_kick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/you_have_been_kicked_for_45_minutes"
+        android:visibility="gone" />
+</LinearLayout>

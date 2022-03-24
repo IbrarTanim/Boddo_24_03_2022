@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="net.boddo.btm.Activity.IntoSlideActivity">
+
+
+    <LinearLayout
+        android:id="@+id/dot_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/sixteen_sp">
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_Page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dot_layout"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/skipBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@color/transparent"
+        android:onClick="skipBTN"
+        android:paddingLeft="@dimen/six_dp"
+        android:paddingRight="@dimen/six_dp"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:fontFamily="@font/helvetica"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/readDeep" />
+
+
+    <Button
+        android:id="@+id/finishBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/sixteen_sp"
+        android:background="@drawable/button2"
+        android:onClick="finishBTN"
+        android:paddingLeft="@dimen/six_dp"
+        android:paddingRight="@dimen/six_dp"
+        android:text="@string/lets_s_go"
+        android:textAllCaps="false"
+        android:fontFamily="@font/helvetica"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="#FFF" />
+</RelativeLayout>

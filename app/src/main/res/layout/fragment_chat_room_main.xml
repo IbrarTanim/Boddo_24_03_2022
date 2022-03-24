@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1000dp"
+    android:minHeight="450dp"
+    android:orientation="vertical">
+
+    <!--<android.support.design.widget.TabLayout-->
+    <!--android:id="@+id/tabLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:background="@drawable/chat_room_selected_tab_bg"-->
+    <!--android:minHeight="?actionBarSize"-->
+    <!--app:tabGravity="fill"-->
+    <!--app:tabTextColor="@color/white"-->
+    <!--app:tabIndicator="@color/deep_yellow"-->
+    <!--app:tabIndicatorHeight="3dp"-->
+    <!--app:tabMode="fixed" />-->
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/deep_yellow"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white" />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

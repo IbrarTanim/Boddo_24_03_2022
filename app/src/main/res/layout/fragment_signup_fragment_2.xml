@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.boddo.btm.Fragment.SignupFragment_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edit_text_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/edittextstyle"
+            android:drawableLeft="@drawable/ic_user"
+            android:drawablePadding="16dp"
+            android:hint="FIRST NAME"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittextstyle"
+            android:drawableLeft="@drawable/ic_password"
+            android:drawablePadding="16dp"
+            android:hint="E-MAIL"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/ic_gender"
+            android:drawablePadding="16dp"
+            android:text="GENDER"
+            android:textSize="18dp" />
+
+        <RadioGroup
+            android:id="@+id/genderGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Other" />
+        </RadioGroup>
+
+
+        <EditText
+            android:id="@+id/edit_text_dateOfBirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button1"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="16dp"
+            android:focusable="false"
+            android:hint="DATE OF BIRTH"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button1"
+            android:text="Next"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

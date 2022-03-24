@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/thirty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civImageUpload"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/seven"
+                android:src="@drawable/demo" />
+
+            <TextView
+                android:id="@+id/tvBackAllLStory"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_weight="2"
+                android:gravity="left|center"
+                android:text="New Post"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty" />
+
+
+            <ImageButton
+                android:id="@+id/ibBackImageUpload"
+                android:layout_width="@dimen/twenty_five"
+                android:layout_height="@dimen/twenty_five"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/fifteen"
+                android:background="@color/transparent"
+                android:padding="@dimen/ten"
+                android:src="@drawable/cancel_icon_16_02_2021" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="3"
+            android:background="@color/content_bg_color">
+
+
+            <View
+                android:layout_width="@dimen/twenty"
+                android:layout_height="fill_parent"
+                android:layout_weight="3" />
+
+
+            <TextView
+                android:id="@+id/ibtnPicImage"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:drawableTop="@drawable/gallery_icon_16_02_2021"
+                android:gravity="center"
+                android:padding="@dimen/seven"
+                android:text="Gallery"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/ibtnCaptureImage"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:drawableTop="@drawable/camera_icon_16_02_2021"
+                android:gravity="center"
+                android:padding="@dimen/seven"
+                android:text="Camera"
+                android:textStyle="bold" />
+
+
+            <View
+                android:layout_width="@dimen/twenty"
+                android:layout_height="fill_parent"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="13" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

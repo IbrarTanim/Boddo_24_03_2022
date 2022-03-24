@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/twenty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+
+
+            <ImageView
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/ten"
+                android:src="@drawable/back_icon_20_26_12_2020" />
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="8">
+
+                <TextView
+                    android:id="@+id/tvFirstUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/five"
+                    android:gravity="center|right"
+                    android:text="Sadia"
+                    android:textSize="@dimen/twenty" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civFirstUser"
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/fifty"
+                    android:layout_toRightOf="@+id/tvFirstUser"
+                    android:background="@color/transparent"
+                    android:src="@drawable/tanim" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civSecondUser"
+                    android:layout_width="@dimen/fifty"
+                    android:layout_height="@dimen/fifty"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_toRightOf="@+id/civFirstUser"
+                    android:background="@color/transparent"
+                    android:src="@drawable/tanim" />
+
+                <TextView
+                    android:id="@+id/tvSecondUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_toRightOf="@+id/civSecondUser"
+                    android:gravity="center|left"
+                    android:text="Sarwar"
+                    android:textSize="@dimen/twenty" />
+
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/ten"
+                android:src="@drawable/dot_menu_icons_1_3_2021" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="16"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="3"
+                android:background="@color/content_bg_color"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="Send a chat request"
+                    android:textSize="@dimen/twenty_five" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_margin="@dimen/ten"
+                    android:layout_weight="8">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/two_hundrad"
+                        android:layout_height="@dimen/two_hundrad"
+                        android:layout_centerInParent="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tanim"
+                        app:riv_corner_radius="@dimen/ten" />
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_width="@dimen/hundrad"
+                        android:layout_height="@dimen/hundrad"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="@dimen/thirty"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/tanim"
+                        app:riv_border_color="@color/white"
+                        app:riv_border_width="@dimen/two"
+                        app:riv_corner_radius="@dimen/ten" />
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="26, Female, Bangladesh"
+                    android:textSize="@dimen/twenty_five" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/two"
+                    android:layout_marginLeft="@dimen/fifty"
+                    android:layout_marginRight="@dimen/fifty"
+                    android:background="@color/bgColor" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginTop="@dimen/two"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="Write something impressive to get a reply"
+                    android:textSize="@dimen/twenty" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="2">
+
+                <ImageView
+                    android:layout_width="@dimen/sixty"
+                    android:layout_height="@dimen/sixty"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/gallery_icon_app_color_1_3_2021" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <!-- <ImageView
+                 android:id="@+id/emoji_btn"
+                 android:layout_width="20dp"
+                 android:layout_height="40dp"
+                 android:layout_gravity="center_vertical"
+                 android:padding="4dp"
+                 android:background="@drawable/messagebox_shape"
+                 android:src="@drawable/smile"
+                 android:visibility="invisible" />-->
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                android:id="@+id/emojicon_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="center|left"
+                android:hint="Type a comment"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+
+                <ImageView
+                    android:id="@+id/submit_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/five"
+                    android:src="@drawable/send_icon_20_03_01_2021_touch"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/submitButtonTouch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/five"
+                    android:src="@drawable/send_icon_20_03_01_2021_normal" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

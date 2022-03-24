@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Theme_Dialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/text_view_share_is_fun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:text="Share is fun"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/warning_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_share_is_fun"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:text="Do not upload any offencive or abusive pictures."
+        android:textColor="@color/colorWhite"
+        android:textSize="10dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/image_view_upload"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/warning_text_view"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ic_profile_picture_upload" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view_upload"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button1"
+        android:gravity="top"
+        android:hint="Write something about the picture..."
+        android:lines="2"
+        android:maxLength="5000"
+        android:padding="10dp"
+        android:textColorHint="@color/colorAccent" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/left_corner_radius_button_bg"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/right_corner_radius_button_bd"
+            android:text="Upload"
+            android:textColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/limitation_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:text="You can upload five picture per day."
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.boddo.btm"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android:hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--android:windowSoftInputMode="adjustPan"-->
+
+    <!---->
+    <application
+        android:allowBackup="true"
+        android:fitsSystemWindows="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher_icon_10_08_2021"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/ic_launcher_icon_10_08_2021"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.OnlyStatusBar"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:windowSoftInputMode="adjustPan"
+        tools:replace="android:theme">
+        <activity android:name=".Activity.AboutActivity"
+            android:exported="true"/>
+        <activity android:name=".Activity.SelectStatusActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AccountCloseStatusActivity"
+            android:exported="false" />
+        <activity android:name=".Activity.DeleteAccountActivity"
+            android:exported="true"/>
+        <activity android:name=".Activity.PasswordActivity"
+            android:exported="true"/>
+        <activity android:name=".Activity.EmailVerifiedActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.BirthDateActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.GenderActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.UserName"
+            android:exported="true" />
+        <activity android:name=".Activity.FullNameActivity"
+            android:exported="true"/>
+        <activity android:name=".Activity.StoryActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.RecentMatchProPicActivity"
+            android:exported="true" />
+        <activity android:name=".Activity.ChatRequestActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".Activity.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.LandingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.ProfileAndAccountsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.OthersProfileOneActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.ProfileOneActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PhotoPostActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.ImageUploadActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.AllCommentsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.AllLikesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.AccountCloseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PictureUploadActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Chatroom.chatroomuser.ChatRoomAllUserActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true"/>
+        <activity
+            android:name=".Activity.auth.RegistrationSecondStepActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.auth.RegistrationFirstStepActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.NewProfilePhotoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.auth.RegistrantionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.ForgetPasswordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.BlockListActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+<activity
+            android:name=".Activity.SplashScreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        -->
+        <activity
+            android:name=".Activity.IntoSlideActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Intro"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.DashBoadActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.AddPhotoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".test.TestImageCropActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.AboutMeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.LocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.RelationshipActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.LookingForActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.HobbiesActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.EducationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.LanguageActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.ProfessionActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.UserLocationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.SmokingActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.HeightActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.OthersProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.ChatRoomActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.HabitsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.HairColorActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.EyeColorActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.about.PersonalityActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.SearchActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.HotlistActivityNew"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" /> <!-- android:windowSoftInputMode="stateVisible|adjustResize" -->
+        <activity
+            android:name=".Activity.photoblog.PhotoBlogActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.FullPhotoViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.OnlyStatusBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Activity.AllUsersActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.MyBlogPhotoActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.OthersGalleryPhotoActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.BuyCreditActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PrivateChatActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.SupportActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.FullImageViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.Settings.SettingsActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.SupportWebViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.TremsofServiceActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PrivacyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.FAQActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.FullImageFromOwnProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_palup_adaptive_forground" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/AdMob_App_ID" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <service android:name=".Services.FirebaseCloudMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.FirebaseIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

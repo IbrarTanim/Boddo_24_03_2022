@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="@dimen/twenty"
+        android:height="@dimen/twenty"
+        android:drawable="@drawable/comment_icon_48_12_01_2012" />
+
+
+</layer-list>

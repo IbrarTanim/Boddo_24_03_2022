@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context=".Activity.RecentMatchProPicActivity">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llRecentMatchBlank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/content_bg_color">
+
+            <TextView
+                android:id="@+id/tvBackStory"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/ten"
+                android:background="?attr/selectableItemBackground"
+                android:drawableStart="@drawable/back_icon_20_26_12_2020"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="center"
+                android:text="Story"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tvShareHistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_add_story_04_11_2021"
+                android:text="Share a story"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/ten"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="16">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/content_bg_color">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvRecentMatch"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginBottom="@dimen/five"
+                            android:layout_weight="15"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/storyPB"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/llmNoMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_no_story_srceen_icon_04_11_2021" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Everyone has a story"
+                        android:textSize="@dimen/fifteen"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/twenty"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginRight="@dimen/twenty"
+                        android:gravity="center"
+                        android:text="Stories will appear here. Come back later to read the stories."
+                        android:textSize="@dimen/thirteen" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="6" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

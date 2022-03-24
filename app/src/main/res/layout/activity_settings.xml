@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llMenueBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingTop="@dimen/five"
+        android:paddingBottom="@dimen/five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <TextView
+            android:id="@+id/tvBackSettings"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_weight="2"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/back_icon_20_26_12_2020"
+            android:drawablePadding="@dimen/ten"
+            android:gravity="center"
+            android:text="Settings"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llMenueBar">
+
+        <LinearLayout
+            android:id="@+id/storyRlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Membership" />
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="Free" />
+
+                    <ImageView
+                        android:id="@+id/ivMembership"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Buy credits" />
+
+                    <ImageView
+                        android:id="@+id/ivBuyCredits"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="My transactions" />
+
+                    <ImageView
+                        android:id="@+id/ivMyTransaction"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Profile &amp; account" />
+
+                    <ImageView
+                        android:id="@+id/ivProfileAndAccounts"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Blocked accounts" />
+
+                    <ImageView
+                        android:id="@+id/text_view_block_user"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Notification" />
+
+                    <ImageView
+                        android:id="@+id/ivNotification"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Verifications" />
+
+                    <TextView
+                        android:id="@+id/verification_status"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="Verified" />
+
+                    <ImageView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Terms of services" />
+
+                    <ImageView
+                        android:id="@+id/ivTermsOfService"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Privacy policy" />
+
+                    <ImageView
+                        android:id="@+id/text_view_privacy_policy"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Restore purchase" />
+
+                    <ImageView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="About" />
+
+                    <ImageView
+                        android:id="@+id/ivAboutSettingActivity"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="27dp"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/arrow_icon_28_02_2021" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginBottom="@dimen/one"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvLogout"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="LOG OUT"
+                        android:textSize="@dimen/fifteen"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/thirty"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/boddo_logo_356" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/fifty"
+                    android:layout_marginBottom="@dimen/one"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/ten"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Made with love in Bangladesh"
+                        android:textSize="@dimen/fifteen" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

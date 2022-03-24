@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llMenueBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingTop="@dimen/five"
+        android:paddingBottom="@dimen/five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/ten"
+            android:scaleType="fitCenter"
+            android:src="@drawable/boddo_logo_356"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivProfileOnePropicSearch"
+            android:layout_width="@dimen/forty"
+            android:layout_height="@dimen/forty"
+            android:layout_marginEnd="@dimen/ten"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/search_icon_28_02_2021"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivProfileOnePropicSupport"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivProfileOnePropicSupport"
+            android:layout_width="@dimen/forty"
+            android:layout_height="@dimen/forty"
+            android:layout_marginEnd="@dimen/ten"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/support_icon_28_02_2021"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivProfileOnePropicSettings"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivProfileOnePropicSettings"
+            android:layout_width="@dimen/forty"
+            android:layout_height="@dimen/forty"
+            android:layout_marginEnd="@dimen/ten"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/settings_icon_28_02_2021"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llMenueBar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                &lt;!&ndash;<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/five">
+
+                    <ImageView
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:padding="@dimen/five"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/boddo_logo_356" />
+
+
+                    <View
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3" />
+
+                    <ImageView
+                        android:id="@+id/ivProfileOnePropicSearch"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/three"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/search_icon_28_02_2021" />
+
+                    <ImageView
+                        android:id="@+id/ivProfileOnePropicSupport"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/three"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/support_icon_28_02_2021" />
+
+                    <ImageView
+                        android:id="@+id/ivProfileOnePropicSettings"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="@dimen/three"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/settings_icon_28_02_2021" />
+
+                </LinearLayout>&ndash;&gt;
+
+
+            </LinearLayout>-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="2"
+                        android:background="@color/transparent" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="2"
+                        android:background="@color/white"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlProfileImage"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:layout_centerInParent="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civProfileOnePropic"
+                        android:layout_width="185dp"
+                        android:layout_height="185dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_default_message_screen_profile_picture_12_07_2021" />
+
+                    <ImageView
+                        android:id="@+id/ivProfilePicture"
+                        android:layout_width="@dimen/fifty"
+                        android:layout_height="@dimen/fifty"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/twenty"
+                        android:src="@drawable/add_profile_picture_icon_28_02_2021" />
+
+                    <TextView
+                        android:id="@+id/tvProfileOneEdit"
+                        android:layout_width="@dimen/eighty"
+                        android:layout_height="@dimen/thirty"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_rounded_edit"
+                        android:gravity="center"
+                        android:text="Edit"
+                        android:textColor="@color/black" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvProfileOneUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/thirty"
+                    android:layout_below="@+id/rlProfileImage"
+                    android:gravity="center"
+                    android:text="Sadia Hossain"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/twenty" />
+
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:background="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_marginLeft="@dimen/seven"
+                android:layout_marginRight="@dimen/seven"
+                android:layout_weight="1"
+                android:background="@drawable/add_credit_bg_white_rounded"
+                android:orientation="horizontal"
+                android:padding="@dimen/five">
+
+                <ImageView
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/five"
+                    android:src="@drawable/add_credit_icon_28_02_2021" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:drawablePadding="@dimen/ten"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="2"
+                        android:gravity="bottom"
+                        android:text="Balance"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvProfileOneBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="2"
+                        android:gravity="top"
+                        android:text="1,000 Credits"
+                        android:textSize="@dimen/ten"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProfileOneAddCredits"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawableRight="@drawable/arrow_icon_28_02_2021"
+                    android:drawablePadding="@dimen/five"
+                    android:gravity="right|center"
+                    android:text="Add credits" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_marginLeft="@dimen/seven"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="@dimen/seven"
+                android:layout_weight="1"
+                android:background="@drawable/add_credit_bg_white_rounded"
+                android:orientation="horizontal"
+                android:padding="@dimen/five">
+
+                <ImageView
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:padding="@dimen/five"
+                    android:src="@drawable/boddo_plus_icon_28_02_2021" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="2"
+                        android:gravity="bottom"
+                        android:text="Discover"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/fifteen"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/tvProfileOneBoddoPlus"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="2"
+                        android:gravity="top"
+                        android:text="Boddo plus"
+                        android:textSize="@dimen/ten"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvProfileOneActivate"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:drawableRight="@drawable/arrow_icon_28_02_2021"
+                    android:drawablePadding="@dimen/five"
+                    android:gravity="right|center"
+                    android:text="Activate" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="4"
+                android:background="@color/transparent" />
+
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

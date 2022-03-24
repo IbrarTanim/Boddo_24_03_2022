@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/seven"
+    app:cardCornerRadius="@dimen/twenty"
+    app:cardElevation="@dimen/seven"
+    app:strokeWidth="@dimen/one">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/awesome"
+            android:textColor="@color/black"
+            android:textSize="@dimen/thirty"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/photoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+
+
+            <!--<com.github.siyamed.shapeimageview.HeartImageView-->
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/other_user_profile_photo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/default_img"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="@dimen/ten"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="4dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/user_profile_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/forty"
+                android:layout_alignEnd="@+id/other_user_profile_photo"
+                android:layout_marginEnd="-70dp"
+                android:src="@drawable/default_img"
+                app:riv_border_color="@color/white"
+                android:scaleType="centerCrop"
+                app:riv_border_width="@dimen/three"
+                app:riv_corner_radius="@dimen/ten"
+                app:siBorderColor="@color/white"
+                app:siBorderWidth="4dp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/text_view_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photoLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/chat_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_message"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/button2"
+            android:text="START CHATTING"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_button"
+            android:layout_marginLeft="@dimen/margin_16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/margin_16dp"
+            android:background="@drawable/button2"
+            android:text="I WILL CHAT LATER"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

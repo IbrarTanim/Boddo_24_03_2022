@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/llMenueBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llMenueBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seventy"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1.5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <ImageView
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:padding="@dimen/ten"
+            android:scaleType="fitCenter"
+            android:src="@drawable/boddo_logo_356" />
+
+        <View
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="7" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llProfileMenue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fifty"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/five"
+        app:layout_constraintTop_toBottomOf="@+id/llMenueBar">
+
+        <View
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <TextView
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Sadia"
+            android:textSize="@dimen/fifteen" />
+
+        <ImageView
+            android:id="@+id/ivProfileOnePropicSupport"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/support_icon_28_02_2021" />
+
+        <ImageView
+            android:id="@+id/ivProfileOnePropicSettings"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/settings_icon_28_02_2021" />
+
+
+        <View
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/htab_maincontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llProfileMenue">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/htab_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fitsSystemWindows="true"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:id="@+id/htab_collapse_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="470dp"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                    app:titleEnabled="false">
+
+                    <RelativeLayout
+                        android:id="@+id/profile_image_container_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/profile_image_view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/ten" />
+
+                        <TextView
+                            android:id="@+id/moto_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/image_indicator"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="2dp"
+                            android:background="@drawable/moto_background"
+                            android:padding="10dp"
+                            android:text="Feeling Lonly"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="@color/colorWhite" />
+
+                        <com.rd.PageIndicatorView
+                            android:id="@+id/image_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/info_layout"
+                            android:layout_centerHorizontal="true"
+                            android:layout_margin="@dimen/margin_5_dp"
+                            app:piv_animationType="worm"
+                            app:piv_dynamicCount="true"
+                            app:piv_interactiveAnimation="true"
+                            app:piv_selectedColor="@color/deep_yellow"
+                            app:piv_unselectedColor="@color/white"
+                            app:piv_viewPager="@id/profile_image_view_pager" />
+
+                        <LinearLayout
+                            android:id="@+id/info_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:background="#99000000"
+                            android:orientation="horizontal"
+                            android:padding="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/text_view_first_name_and_user_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:padding="2dp"
+                                    android:singleLine="true"
+                                    android:text="Ariful Haque @Arif"
+                                    android:textAppearance="?android:textAppearanceMedium"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/text_view_age_gender_country"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:padding="3dp"
+                                    android:singleLine="true"
+                                    android:text="31-Male-Bangladesh"
+                                    android:textAppearance="?android:textAppearanceSmall"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/image_view_photo"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_gravity="end"
+                                android:layout_weight="4"
+                                android:src="@drawable/ic_add_profile_picture" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/htab_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="48dp"
+                        android:background="@drawable/blur_bg"
+                        app:layout_collapseMode="parallax"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/htab_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabBackground="@color/colorPrimary"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/deep_yellow"
+                    app:tabIndicatorHeight="@dimen/paddin_4dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/white" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_vertical"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/child_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/htab_viewpager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

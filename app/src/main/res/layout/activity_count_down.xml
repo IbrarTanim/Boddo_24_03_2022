@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coming_soon_bg">
+
+
+
+    <RelativeLayout
+        style="@style/match_parent_wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/six_dp"
+        android:paddingRight="@dimen/six_dp">
+
+        <ImageView
+        android:id="@+id/activity_cardinal_logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/palup_logo" />
+
+        <TextView
+            android:id="@+id/coming_soon"
+            android:text="@string/coming_soon"
+            android:layout_below="@+id/activity_cardinal_logo"
+            style="@style/coming_soon_heading_style" />
+        <TextView
+            android:id="@+id/beta_version_text"
+            android:text="@string/beta_text"
+            android:layout_below="@+id/coming_soon"
+            style="@style/beta_text" />
+
+        <LinearLayout
+            android:id="@+id/activity_countdown_wheels_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@+id/beta_version_text"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <com.todddavies.components.progressbar.ProgressWheel
+                android:id="@+id/activity_countdown_timer_days"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                ProgressWheel:pwBarColor="@color/user_define_one"
+                ProgressWheel:pwBarLength="60dp"
+                ProgressWheel:pwBarWidth="7dp"
+                ProgressWheel:pwRimColor="@color/rim_color_gray"
+                ProgressWheel:pwRimWidth="7dp"
+                ProgressWheel:pwText="@string/timer"
+                ProgressWheel:pwTextColor="@color/white"
+                ProgressWheel:pwTextSize="18sp" />
+
+            <com.todddavies.components.progressbar.ProgressWheel
+                android:id="@+id/activity_countdown_timer_hours"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                ProgressWheel:pwBarColor="@color/user_define_one"
+                ProgressWheel:pwBarLength="60dp"
+                ProgressWheel:pwBarWidth="7dp"
+                ProgressWheel:pwRimColor="@color/rim_color_gray"
+                ProgressWheel:pwRimWidth="7dp"
+                ProgressWheel:pwText="@string/timer"
+                ProgressWheel:pwTextColor="@color/white"
+                ProgressWheel:pwTextSize="18sp" />
+
+            <com.todddavies.components.progressbar.ProgressWheel
+                android:id="@+id/activity_countdown_timer_minutes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                ProgressWheel:pwBarColor="@color/user_define_one"
+                ProgressWheel:pwBarLength="60dp"
+                ProgressWheel:pwBarWidth="7dp"
+                ProgressWheel:pwRimColor="@color/rim_color_gray"
+                ProgressWheel:pwRimWidth="7dp"
+                ProgressWheel:pwText="@string/timer"
+                ProgressWheel:pwTextColor="@color/white"
+                ProgressWheel:pwTextSize="18sp" />
+
+            <com.todddavies.components.progressbar.ProgressWheel
+                android:id="@+id/activity_countdown_timer_seconds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                ProgressWheel:pwBarColor="@color/user_define_one"
+                ProgressWheel:pwBarLength="60dp"
+                ProgressWheel:pwBarWidth="7dp"
+                ProgressWheel:pwRimColor="@color/rim_color_gray"
+                ProgressWheel:pwRimWidth="7dp"
+                ProgressWheel:pwText="@string/timer"
+                ProgressWheel:pwTextColor="@color/white"
+                ProgressWheel:pwTextSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_countdown_labels_layout"
+            style="@style/match_parent_wrap_content"
+            android:layout_below="@id/activity_countdown_wheels_layout"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/activity_countdown_timer_days_text"
+                style="@style/textView"
+                android:text="@string/days" />
+
+            <TextView
+                android:id="@+id/activity_countdown_timer_hours_text"
+                style="@style/textView"
+                android:text="@string/hours" />
+
+            <TextView
+                android:id="@+id/activity_countdown_timer_minutes_text"
+                style="@style/textView"
+                android:text="@string/minutes" />
+
+            <TextView
+                android:id="@+id/activity_countdown_timer_seconds_text"
+                style="@style/textView"
+                android:text="@string/seconds" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

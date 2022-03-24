@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llMenueBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:paddingTop="@dimen/five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/ten"
+            android:scaleType="fitCenter"
+            android:src="@drawable/boddo_logo_356"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llMenueBar">
+
+
+        <LinearLayout
+            android:id="@+id/llTabMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/like_favo_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/thirty_five"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:tabBackground="@drawable/tab_selected_unselected_bg"
+                app:tabGravity="fill"
+                app:tabIndicatorFullWidth="true"
+                style="@style/AppTabLayout"
+                app:tabIndicatorColor="#54AE4C"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabPadding="@dimen/five"
+                app:tabSelectedTextColor="@color/gray"
+                app:tabTextColor="@color/gray">
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/badging_like_view"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="80dp"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/badging_favorite_view"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:id="@+id/badging_visitors_view"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/like_favo_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTabMain" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

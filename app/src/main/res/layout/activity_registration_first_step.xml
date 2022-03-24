@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context="net.boddo.btm.Activity.auth.RegistrationFirstStepActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_with_gray_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_22dp"
+            android:src="@drawable/boddo_logo_slider" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/paddin_16dp"
+                android:hint="@string/enter_user_name"
+                android:imeOptions="actionUnspecified"
+                android:inputType="text"
+                android:paddingBottom="@dimen/paddin_16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/paddin_16dp"
+                android:hint="@string/password"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:paddingBottom="@dimen/paddin_16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            app:hintAnimationEnabled="true"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/paddin_16dp"
+                android:hint="@string/enter_confirm_password"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:paddingBottom="@dimen/paddin_16dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button8"
+            android:text="NEXT"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

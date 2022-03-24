@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/thirty_five">
+
+        <LinearLayout
+            android:id="@+id/llMenueBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/forty"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1.5"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:paddingLeft="@dimen/two"
+                android:paddingTop="@dimen/five"
+                android:paddingRight="@dimen/five"
+                android:paddingBottom="@dimen/five"
+                android:scaleType="fitCenter"
+                android:src="@drawable/boddo_logo_356" />
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="4" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/upload_new_image"
+                android:layout_width="@dimen/forty"
+                android:layout_height="@dimen/forty"
+                android:layout_marginRight="@dimen/ten"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rokan" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifty"
+            android:layout_below="@+id/llMenueBar"
+            android:layout_margin="@dimen/fifteen"
+            android:layout_weight="1.5"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMatch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hundrad"
+            android:layout_below="@+id/llSearchBar"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civRecentMatchs"
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="@dimen/eighty"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tanim" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/civRecentMatchs"
+                    android:gravity="center"
+                    android:text="Recent matchs"
+                    android:textSize="@dimen/fifteen" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civChatRequest"
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="@dimen/eighty"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tanim" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/civChatRequest"
+                    android:gravity="center"
+                    android:text="Chat Request"
+                    android:textSize="@dimen/fifteen" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civStory"
+                    android:layout_width="@dimen/eighty"
+                    android:layout_height="@dimen/eighty"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/tanim" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/civStory"
+                    android:gravity="center"
+                    android:text="Story"
+                    android:textSize="@dimen/fifteen" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llMatch"
+            android:layout_marginTop="@dimen/ten">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_five"
+                android:background="@color/gray_light_light"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="@dimen/twenty"
+                    android:text="Chats"
+                    android:textSize="@dimen/twenty" />
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    app:badgeBackground="@drawable/badging_bg"
+                    app:maxTextLength="2" />
+
+                <View
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvActiveChats"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/thirty" />
+
+                <TextView
+                    android:id="@+id/empty_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/no_data_available"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

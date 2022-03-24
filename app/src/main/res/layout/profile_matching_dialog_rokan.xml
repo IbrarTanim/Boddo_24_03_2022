@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/twenty"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="It's a Match!"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twenty_five" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="5">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="@dimen/two_hundrad"
+                android:layout_height="@dimen/two_hundrad"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tanim"
+                app:riv_corner_radius="@dimen/ten" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="@dimen/hundrad"
+                android:layout_height="@dimen/hundrad"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/thirty"
+                android:background="@color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tanim"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="@dimen/two"
+                app:riv_corner_radius="@dimen/ten" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="You &amp; Tanzin Tisha have liked each other."
+            android:textColor="@color/black"
+            android:textSize="@dimen/fifteen" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_weight="1"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="Start Chatting"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="I will chat later"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

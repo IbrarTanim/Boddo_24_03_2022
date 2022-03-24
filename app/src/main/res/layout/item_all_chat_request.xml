@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginBottom="@dimen/one"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/civChatRequestItem"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
+        android:src="@drawable/ic_default_message_screen_profile_picture_04_11_2021" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/civChatRequestItem">
+
+        <TextView
+            android:id="@+id/chatRequest_usernameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="top|left"
+            android:layout_marginTop="@dimen/thirty"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/seventeen"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/chatRequest_messageTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatRequest_usernameTV"
+            android:layout_marginLeft="10dp"
+            android:gravity="top|left"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twelve" />
+
+
+        <Button
+            android:id="@+id/chatRequest_acceptBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chatRequest_messageTV"
+            android:layout_marginLeft="@dimen/thirty"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:background="@drawable/bg_rounded_button"
+            android:gravity="center"
+            android:text="Accept"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ten" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ibBackPhotoPost"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/ten"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/back_icon_20_26_12_2020"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="left|center"
+                android:text="Share picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty" />
+
+
+            <TextView
+                android:id="@+id/tvPost"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="POST"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/twenty"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="16"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:background="@color/content_bg_color"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="Hi @Sarwar"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/twenty"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="1"
+                        android:text="Your account has been disabled!"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/twenty"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zero"
+                        android:layout_weight="8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text="Possible reasons:"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/twenty"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/ten"
+                                android:background="@drawable/support_bg"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_weight="10"
+                                android:gravity="center|left"
+                                android:text="Using fake photos"
+                                android:textColor="@color/gray_light"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/ten"
+                                android:background="@drawable/support_bg"
+                                android:gravity="center"
+                                android:text="2"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_weight="10"
+                                android:gravity="center|left"
+                                android:text="Creating fake profiles"
+                                android:textColor="@color/gray_light"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/ten"
+                                android:background="@drawable/support_bg"
+                                android:gravity="center"
+                                android:text="3"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_weight="10"
+                                android:gravity="center|left"
+                                android:text="Not meeting age requirements(18+)"
+                                android:textColor="@color/gray_light"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/ten"
+                                android:background="@drawable/support_bg"
+                                android:gravity="center"
+                                android:text="4"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_weight="10"
+                                android:gravity="center|left"
+                                android:text="Sending abusive or annoying messages to other users"
+                                android:textColor="@color/gray_light"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/ten"
+                                android:background="@drawable/support_bg"
+                                android:gravity="center"
+                                android:text="5"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_weight="10"
+                                android:gravity="center|left"
+                                android:text="Using Boddo for commercial solitation or advertising"
+                                android:textColor="@color/gray_light"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zero"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/ten"
+                                android:background="@drawable/support_bg"
+                                android:gravity="center"
+                                android:text="6"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/five"
+                                android:layout_weight="10"
+                                android:gravity="center|left"
+                                android:text="Spamming or abuse to others use on the chat rooms"
+                                android:textColor="@color/gray_light"
+                                android:textSize="@dimen/twenty"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/thirty"
+                    android:paddingRight="@dimen/thirty"
+                    android:text="You can find a more detailed list of reasons in Tearms of Services. If you think you haven't violeted any rules, please contact Support Team." />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_marginLeft="@dimen/seventy"
+                    android:layout_marginRight="@dimen/seventy"
+                    android:background="@drawable/button2"
+                    android:gravity="center"
+                    android:text="CONTACT SUPPORT"
+                    android:textColor="@color/white" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/thirty"
+                    android:paddingRight="@dimen/thirty"
+                    android:text="LOG OUT" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

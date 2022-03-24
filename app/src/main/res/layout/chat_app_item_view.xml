@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_8_dp"
+        android:background="@drawable/chat_time_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/last_text_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5_dp"
+            android:layout_marginRight="@dimen/margin_5_dp"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_8dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#4D4E4F"
+            android:textSize="@dimen/thirteen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_left_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:orientation="vertical"
+        android:padding="@dimen/paddin_4dp">
+
+        <TextView
+            android:id="@+id/chat_left_msg_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/chat_bubble_left"
+            android:padding="10dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#434343"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/left_seen_text_view"
+            android:layout_width="68dp"
+            android:layout_height="15dp"
+            android:text="@string/seen"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/left_image_borger"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/chat_left_msg_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="fitStart"
+                android:visibility="gone"
+                app:riv_corner_radius="@dimen/ten" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_right_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/ten"
+        android:layout_marginRight="@dimen/ten"
+        android:orientation="vertical"
+        android:padding="@dimen/paddin_4dp">
+
+        <TextView
+            android:id="@+id/chat_right_msg_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/chat_bubble_right"
+            android:padding="10dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/right_seen_text_view"
+            android:layout_width="68dp"
+            android:layout_height="15dp"
+            android:text="@string/seen"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/right_image_borger"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/chat_right_msg_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:scaleType="fitEnd"
+                android:visibility="gone"
+                app:riv_corner_radius="@dimen/ten" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

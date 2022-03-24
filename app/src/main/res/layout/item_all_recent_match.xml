@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:layout_marginTop="@dimen/ten"
+    android:layout_marginRight="@dimen/ten"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/like_favorite_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/chatRequestIV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="6"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rokan"
+            app:riv_oval="false" />
+
+
+       <!-- <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civMessageRecentMatch"
+            android:layout_width="@dimen/fifty"
+            android:layout_height="@dimen/seventy"
+            android:layout_above="@+id/llBottom"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/five"
+            android:layout_marginBottom="@dimen/five"
+            android:padding="@dimen/ten"
+            android:src="@drawable/ic_message_icon_31_10_2021"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/seven"
+            android:visibility="gone"
+            app:civ_circle_background_color="@color/white" />-->
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="2.5"
+            android:background="@drawable/match_cardview"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/chatRequestNameTV"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="Monalisa Khan Chowdhury"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen" />
+
+                <TextView
+                    android:id="@+id/chatRequestAgeTV"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="32"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/fifteen" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/chatRequestAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_marginLeft="@dimen/five"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/thirteen" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zero"
+                android:layout_gravity="right"
+                android:layout_weight="1.5">
+
+                <TextView
+                    android:id="@+id/startChatMessageRecentMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="1.5"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/thirteen"
+                    android:paddingRight="@dimen/thirteen"
+                    android:paddingTop="@dimen/five"
+                    android:paddingBottom="@dimen/five"
+                    android:text="START A CHAT"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/thirteen"
+                    android:layout_marginBottom="@dimen/ten"
+                    android:background="@drawable/recent_match_chat"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

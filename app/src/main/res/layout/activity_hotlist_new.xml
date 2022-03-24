@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hotty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/twenty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2" />
+
+            <TextView
+                android:id="@+id/tvBackHotList"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:drawableLeft="@drawable/back_icon_20_26_12_2020"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="left|center"
+                android:text="Hotlist"
+                android:textColor="@color/black" />
+
+
+            <TextView
+                android:id="@+id/tvJoinAtHotList"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/five"
+                android:gravity="center"
+                android:text="JOIN"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="16"
+            android:background="#E8E8E8">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                   <!-- <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />-->
+                    <!-- <android.support.v4.widget.SwipeRefreshLayout
+                         android:id="@+id/refreshLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_below="@+id/toolbar">
+                         <android.support.v7.widget.RecyclerView
+                             android:id="@+id/hotListrecyclerView"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:padding="8dp" />
+                     </android.support.v4.widget.SwipeRefreshLayout>-->
+
+                    <!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/refreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/three"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_weight="15">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hotListrecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+                    <LinearLayout
+                        android:id="@+id/llHotListData"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:background="#E8E8E8"/>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hotListrecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/ten"
+                            android:layout_marginLeft="@dimen/five"
+                            android:layout_marginBottom="@dimen/ten"
+                            android:layout_weight="15" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+         <!--   <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+
+                    &lt;!&ndash; <android.support.v4.widget.SwipeRefreshLayout
+                         android:id="@+id/refreshLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_below="@+id/toolbar">
+                         <android.support.v7.widget.RecyclerView
+                             android:id="@+id/hotListrecyclerView"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:padding="8dp" />
+                     </android.support.v4.widget.SwipeRefreshLayout>&ndash;&gt;
+
+                    &lt;!&ndash;<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/refreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/three"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_weight="15">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hotListrecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" />
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>&ndash;&gt;
+
+
+                    <LinearLayout
+                        android:id="@+id/llHotListData"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hotListrecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/ten"
+                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_marginBottom="@dimen/ten"
+                            android:layout_weight="15" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>-->
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:id="@+id/hotty"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ tools:context="net.boddo.btm.Activity.HotlistActivityNew">
+ <include
+     android:id="@+id/toolbar"
+     layout="@layout/custom_toolbar_title_middle_with_black_arrow"/>
+
+
+
+
+ &lt;!&ndash;        <LinearLayout&ndash;&gt;
+ &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;
+ &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;            android:orientation="horizontal">&ndash;&gt;
+
+ &lt;!&ndash;            <LinearLayout&ndash;&gt;
+ &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;
+ &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                android:layout_weight="2"&ndash;&gt;
+ &lt;!&ndash;                android:orientation="vertical">&ndash;&gt;
+
+ &lt;!&ndash;                <ImageView&ndash;&gt;
+ &lt;!&ndash;                    android:id="@+id/balance_bag"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_height="50dp"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_gravity="center"&ndash;&gt;
+ &lt;!&ndash;                    android:backgroundTint="@color/colorAccent"&ndash;&gt;
+ &lt;!&ndash;                    android:src="@drawable/ic_wallet_filled_money_tool" />&ndash;&gt;
+ &lt;!&ndash;                <TextView&ndash;&gt;
+ &lt;!&ndash;                    android:id="@+id/palup_credits"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_gravity="center"&ndash;&gt;
+ &lt;!&ndash;                    android:padding="2dp"&ndash;&gt;
+ &lt;!&ndash;                    android:text="150 credits"&ndash;&gt;
+ &lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;
+ &lt;!&ndash;                    android:textSize="10dp" />&ndash;&gt;
+ &lt;!&ndash;            </LinearLayout>&ndash;&gt;
+ &lt;!&ndash;            <LinearLayout&ndash;&gt;
+ &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;
+ &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                android:layout_weight="1"&ndash;&gt;
+ &lt;!&ndash;                android:orientation="vertical">&ndash;&gt;
+ &lt;!&ndash;                <EditText&ndash;&gt;
+ &lt;!&ndash;                    android:id="@+id/bid_amnt"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_width="match_parent"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_height="50dp"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_gravity="center"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_marginLeft="10dp"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_marginRight="10dp"&ndash;&gt;
+ &lt;!&ndash;                    android:background="@drawable/hotlist_edit_text_bg"&ndash;&gt;
+ &lt;!&ndash;                    android:hint="Enter your bid for hotlist"&ndash;&gt;
+ &lt;!&ndash;                    android:inputType="number"&ndash;&gt;
+ &lt;!&ndash;                    android:padding="10dp"&ndash;&gt;
+ &lt;!&ndash;                    android:textAlignment="center" />&ndash;&gt;
+ &lt;!&ndash;                <TextView&ndash;&gt;
+ &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_gravity="center"&ndash;&gt;
+ &lt;!&ndash;                    android:padding="2dp"&ndash;&gt;
+ &lt;!&ndash;                    android:text="Bid for your place,minimum 20 credits"&ndash;&gt;
+ &lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;
+ &lt;!&ndash;                    android:textSize="10dp" />&ndash;&gt;
+ &lt;!&ndash;            </LinearLayout>&ndash;&gt;
+ &lt;!&ndash;            <LinearLayout&ndash;&gt;
+ &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;
+ &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                android:layout_weight="2"&ndash;&gt;
+ &lt;!&ndash;                android:orientation="vertical">&ndash;&gt;
+ &lt;!&ndash;                <Button&ndash;&gt;
+ &lt;!&ndash;                    android:id="@+id/join_button"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_height="50dp"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_alignParentRight="true"&ndash;&gt;
+ &lt;!&ndash;                    android:background="@drawable/hotlist_edit_text_bg"&ndash;&gt;
+ &lt;!&ndash;                    android:onClick="addMeHotlist"&ndash;&gt;
+ &lt;!&ndash;                    android:text="join"&ndash;&gt;
+ &lt;!&ndash;                    android:textSize="18dp"&ndash;&gt;
+ &lt;!&ndash;                    android:textStyle="bold" />&ndash;&gt;
+ &lt;!&ndash;                <TextView&ndash;&gt;
+ &lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_below="@+id/join_button"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_alignParentRight="true"&ndash;&gt;
+ &lt;!&ndash;                    android:layout_gravity="center"&ndash;&gt;
+ &lt;!&ndash;                    android:padding="2dp"&ndash;&gt;
+ &lt;!&ndash;                    android:text="Valid 12 hours"&ndash;&gt;
+ &lt;!&ndash;                    android:textColor="@color/white"&ndash;&gt;
+ &lt;!&ndash;                    android:textSize="10dp" />&ndash;&gt;
+ &lt;!&ndash;            </LinearLayout>&ndash;&gt;
+ &lt;!&ndash;        </LinearLayout>&ndash;&gt;
+
+
+ <android.support.v4.widget.SwipeRefreshLayout
+     android:id="@+id/refreshLayout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_below="@+id/toolbar">
+     <android.support.v7.widget.RecyclerView
+         android:id="@+id/hotListrecyclerView"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="8dp" />
+ </android.support.v4.widget.SwipeRefreshLayout>
+ </RelativeLayout>
+ -->

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="@dimen/padding_8dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/spacing_medium"
+    app:cardElevation="8dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/bt_close"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_close"
+                android:tint="@color/grey_20" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-40dp"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:background="@drawable/boddo_logo_slider"
+                    android:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bt_rate"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your request has been sent.Please wait for your confirmation."
+            android:textAllCaps="false"
+            android:textColor="@color/colorAccent"
+            app:fontFamily="sans-serif-medium" />
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/bt_getcode"
+            style="@style/RippleStyleWhite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_xxlarge"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/close_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Close"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@android:color/white"
+                app:fontFamily="sans-serif-medium" />
+
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

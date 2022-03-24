@@ -1,0 +1,198 @@
+<resources>
+
+    <style name="MyToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <string name="app_name">Boddo</string>
+    <string name="AdMob_App_ID">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="content_description">Content Description</string>
+    <string name="days">D</string>
+    <string name="hours">H</string>
+    <string name="minutes">M</string>
+    <string name="seconds">S</string>
+    <string name="timer">00</string>
+
+    <string name="image_folder_path">/Android/Data/ImageStorage</string>
+
+
+    <string name="title">Sample Activity #%d</string>
+
+    <string name="qustion">\?</string>
+    <string name="title_activity_countdown_timer">CountdownTimerActivity</string>
+    <string name="coming_soon">We are coming soon</string>
+    //ariful
+    <string name="beta_text">stay tune with us for the beta version</string>
+    <string name="notification_add_to_cart_button">Reply</string>
+    <string name="group_name">Group 1</string>
+    <string name="notifications_admin_channel_name">Global channel</string>
+    //end of ariful
+
+    //no-match description for recent match
+    <string name="noMatchTitle">Meet your match</string>
+    <string name="noMatchDescription"></string>
+    <string name="upload_profile">Update your profile</string>
+    ////no-match description for recent match
+
+    //no-chat_request description for recent match
+    <string name="noChatTitle">Get chat request</string>
+    <string name="noChatDescription"></string>
+
+    ////no-chat_request description for recent match
+
+    //story
+    <string name="storyTitle">Everyone has a story</string>
+    <string name="storyDescription"></string>
+
+    ////story
+
+    //chat_list for chat fragment
+    <string name="chatListTitle">See your messages</string>
+    <string name="chatListDescription"></string>
+
+    ////chat_list for chat fragment
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="notifications_admin_channel_description">Notifications sent from the app admin</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Example">Terms \u0026 Conditions</string>
+    <string name="Chat">Palup \u0026 Palup</string>
+    <string name="lets_s_go">LET\'S GO!</string>
+    <string name="skip">Skip</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="terms_and_condition_description">
+         Welcome to Boddo
+        \n
+        These  terms and conditions outline the rules and regulations for the use of Palup\'s  Website.These  terms and conditions outline the rules and regulations for the use of Palup\'s  Website.
+        Palup is located at:Shibgonj Main road, Bogura 5810 - Rajshahi,  Bangladesh.
+        By accessing this website we assume you accept these terms  and conditions in full. Do not continue to use Palup\'s app or website.
+        If you do not accept all of the terms and conditions stated  on this page.
+        The following terminology applies to these Terms and  Conditions, Privacy Statement and Disclaimer Notice and any or all Agreements:  "Client", "You" and "Your" refers to you, the  person accessing this website and accepting the Company\'s terms and conditions.  "The Company", "Ourselves", "We", "Our"  and "Us", refers to our Company. "Party",  "Parties", or "Us", refers to both the Client and  ourselves, or either the Client or ourselves. All terms refer to the offer,  acceptance and consideration of payment necessary to undertake the process of  our assistance to the Client in the most appropriate manner, whether by formal  meetings of a fixed duration, or any other means, for the express purpose of  meeting the Client\'s needs in respect of provision of the Company\'s stated  services/products, in accordance with and subject to, prevailing lawof  Bangladesh. Any use of the above terminology or other words in the singular,  plural, capitalisation and/or he/she or they, are taken as interchangeable and  therefore as referring to same.
+
+Cookies
+        We employ the use of cookies. By using Palup\'s website you  consent to the use of cookies in accordance with Palup\'s privacy policy.Most of  the modern day interactive web sites use cookies to enable us to retrieve user  details for each visit. Cookies are used in some areas of our site to enable  the functionality of this area and ease of use for those people visiting. Some  of our affiliate / advertising partners may also use cookies.
+License
+Unless otherwise stated, Palup and/or it\'s licensors own the  intellectual property rights for all material on Palup. All intellectual  property rights are reserved. You may view and/or print pages from  https://www.bluetigermobile.com for your own personal use subject to  restrictions set in these terms and conditions.
+You must not:
+Republish material from https://www.bluetigermobile.com  (Palup) Sell, rent or sub-license material from https://www.bluetigermobile.com  (Palup) Reproduce, duplicate or copy material from https://www.bluetigermobile.com  (Palup) Redistribute content from Palup (unless content is specifically made  for redistribution).
+
+Whilst we endeavour to ensure that the information on this  website is correct, we do not warrant its completeness or accuracy; nor do we  commit to ensuring that the website remains available or that the material on  the website is kept up to date Content Liability.
+
+We shall have no responsibility or liability for any content  appearing on your Web site. You agree to indemnify and defend us against all  claims arising out of or based upon your Website. No link(s) may appear on any page  on your Web site or within any context containing content or materials that may  be interpreted as libelous, obscene or criminal, or which infringes, otherwise  violates, or advocates the infringement or other violation of, any third party  rights.
+Disclaimer
+
+To the maximum extent permitted by applicable law, we  exclude all representations, warranties and conditions relating to our website  and the use of this website (including, without limitation, any warranties  implied by law in respect of satisfactory quality, fitness for purpose and/or  the use of reasonable care and skill). Nothing in this disclaimer will:
+limit or exclude our or your liability for death or personal  injury resulting from negligence; limit or exclude our or your liability for  fraud or fraudulent misrepresentation; limit any of our or your liabilities in  any way that is not permitted under applicable law; or exclude any of our or  your liabilities that may not be excluded under applicable law.
+The limitations and exclusions of liability set out in this  Section and elsewhere in this disclaimer: (a) are subject to the preceding  paragraph; and (b) govern all liabilities arising under the disclaimer or in  relation to the subject matter of this disclaimer, including liabilities  arising in contract, in tort (including negligence) and for breach of statutory  duty. To the extent that the website and the information and services on the  website are provided free of charge, we will not be liable for any loss or  damage of any nature.
+    </string>
+    <string name="password_does_not_matched">Password not matched</string>
+    <string name="user_name_too_short">User Name Too Short</string>
+    <string name="password_too_short">Password too short</string>
+    <string name="enter_user_name">Username</string>
+    <string name="enter_user_name_limite">Username must be not less than 3 letters</string>
+    <string name="enter_password">Enter You Password</string>
+    <string name="enter_confirm_password">Confirm Password</string>
+    <string name="password_not_matched">Password not matched</string>
+    <string name="error_wrong_format">Wrong Formet</string>
+    <string name="user_name_exist">User Already Exist</string>
+    <string name="confirm_password_too_short">Confirm password is too short</string>
+    <string name="email_already_exist">Email Already Exist</string>
+    <string name="something_went_wrong">Some thing went wrong</string>
+    <string name="invalid_username_or_password">Invalid User name or Password</string>
+    <string name="point_policy_text">Be polite and respectful. Any abusive behaviours are prohibited in Chat Room. If conducted, account will be banned</string>
+    <string name="point_policy_text2">You have to pay 20 credits to joining global chat room. You can chat unlimited for 24hours. Others chat rooms are free for you</string>
+
+
+    <!--//permission-->
+    <string name="moto">This Moment is very nice.I wish its will come again </string>
+    <string name="upload_image">UPLOAD IMAGE</string>
+    <string name="supporttitle1">Before contacting us, please check out the FAQ to see if your question has already been answered there </string>
+    <string name="supporttitle2">If you have further questions or suggestions about Palup, please send us a message</string>
+    <string name="read_file">This app needs access to your file storage so that it can read photos.</string>
+    <string name="option_menu">⋮</string>
+
+
+    <string name="type_you_message_here">Type you message here...</string>
+
+    <string name="just_now">Just now</string>
+
+
+    <string name="seen">✓✓seen</string>
+
+    <string name="typing">Typing...</string>
+
+    <string name="no_data_available">No Active List</string>
+    <string name="no_message_request">No Message request</string>
+    <string name="no_liked">No Liked here</string>
+    <string name="no_favourite">No Favourite here</string>
+    <string name="awesome">It\'s a Match!</string>
+    <string name="email">Email</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="buycredit_futter">Through the credits You can view who liked, visit, favorite you. Also you can join Be See feature to explore your self and extend your chat request,update more photos and many more!.</string>
+    <string name="chat_mess1">You have 3 chat request per day. Write something impressive to get a reply.</string>
+    <string name="todo">TODO</string>
+    <string name="sstext">Hold Photo to make Profile Picture or Change the order</string>
+    <string name="you_have_been_kicked_for_45_minutes">You have been kicked for 45 minutes.</string>
+    <string name="entering_hash">f09283123ca585b2e9e5abce3f9e82c0</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="login">Login</string>
+    <string name="more_option">More Options</string>
+    <string name="offline">Offline</string>
+    <string name="apply_for_admin">Apply For Admin</string>
+    <string name="at_the_rate">\@</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="back_button">back button</string>
+    <string name="be_seen_use_boddo_credits_to_bid_for_a_spot_on_the_hotlist_and_show_everyone">Be seen! Use boddo credits to bid for a spot on the Hotlist and show
+        everyone who are you. The higher you bid, the higher you are on the list. Minimum bid is 20 credits and valid 12 hours</string>
+    <string name="text_befor_continue">text befor continue</string>
+    <string name="by_tapping_continue">By tapping \'Continue\' and confirming your subscription, you accept <b> Boddo\'s Terms &amp; Conditions </b> and request that your subscription start immediately. Your Google Play account will be charged the fee mentioned above. Your subscription will automatically renew for the same period and price until you deactivate auto-renewal in your Google Play account settings at least 24 hours prior to the end of the current period. Google Play\'s cancellation rights will apply. </string>
+
+    <string name="reset_password">Recover \n<b> your account </b></string>
+    <string name="your_username"> USERNAME </string>
+    <string name="your_full_name"> FULL NAME  </string>
+    <string name="your_password"> PASSWORD </string>
+    <string name="your_email">EMAIL </string>
+    <string name="select_your_gender"> GENDER </string>
+    <string name="your_date_of_birth">BIRTH DATE</string>
+    <string name="by_clicking_join"><![CDATA[By clicking JOIN you agree with <font color=#E11D74>\'Terms & Conditions\'.</font> Learn about how process your data in our <font color=#E11D74>\'Privacy Policy</font>]]></string>
+    <string name="other">Other</string>
+
+
+    <string name="sarwarAbout">Self-driven and motivated Entrepreneur with a proven track record of success and extraordinary achievement in building a company from simple ideas.</string>
+
+    <string-array name="language">
+        <item>Bengali</item>
+        <item>English</item>
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Austria</item>
+        <item>Urdu</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Bulgaria</item>
+        <item>Croatia</item>
+        <item>France</item>
+        <item>German</item>
+        <item>Spanish</item>
+        <item>Italian </item>
+    </string-array>
+    <string-array name="status">
+        <item>Ariful</item>
+        <item>Single</item>
+        <item>19-28</item>
+        <item>Yes</item>
+    </string-array>
+    <string-array name="nav_icon">
+        <item>Palup Balance</item>
+    </string-array>
+    <!-- google ads-->
+</resources>

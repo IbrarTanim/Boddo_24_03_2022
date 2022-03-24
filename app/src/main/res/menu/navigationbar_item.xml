@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/hotlist_menu" android:title="Hotlist" android:icon="@drawable/ic_fire"/>
+    <item android:id="@+id/search_user_menu" android:title="Search" android:icon="@drawable/ic_search_black"/>
+   <!-- <item android:id="@+id/palup_balance_menu" android:title="Palup Balance" android:icon="@drawable/ic_account_balance"/>-->
+    <item android:id="@+id/block_list" android:title="Blocked List" android:icon="@drawable/ic_block"/>
+   <!-- <item android:id="@+id/support_menu" android:title="Support" android:icon="@drawable/ic_24_hours_support"/>-->
+    <item android:id="@+id/setting_menu" android:title="Settings" android:icon="@drawable/ic_settings"/>
+    <item android:id="@+id/log_out" android:title="Log Out" android:icon="@drawable/ic_logout"/>
+
+
+</menu>

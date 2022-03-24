@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context=".Activity.DeleteAccountActivity">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llMenueBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:paddingTop="@dimen/five"
+        android:paddingBottom="@dimen/five"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+        <TextView
+            android:id="@+id/tvBackDelete"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_weight="2"
+            android:background="?attr/selectableItemBackground"
+            android:drawableStart="@drawable/back_icon_20_26_12_2020"
+            android:drawablePadding="@dimen/ten"
+            android:gravity="center"
+            android:text="Delete Account"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llMenueBar">
+
+        <LinearLayout
+            android:id="@+id/storyRlMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="14.5"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/five"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Please share a quick reason for deleting your profile to confirm"
+                    android:textColor="@color/black"
+                    android:paddingStart="@dimen/forty"
+                    android:paddingEnd="@dimen/forty"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMeetSomeone"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_marginLeft="@dimen/forty"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="@dimen/forty"
+                            android:background="@drawable/username_save_button"
+                            android:gravity="center"
+                            android:text="I MET SOMEONE ON BODDO"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+
+                        <TextView
+                            android:id="@+id/tvMeetSomeoneElseWhere"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_marginLeft="@dimen/forty"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_marginRight="@dimen/forty"
+                            android:background="@drawable/username_save_button"
+                            android:gravity="center"
+                            android:text="I MET SOMEONE ELSEWHERE"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+
+                        <TextView
+                            android:id="@+id/tvResetMyAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_marginLeft="@dimen/forty"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_marginRight="@dimen/forty"
+                            android:background="@drawable/username_save_button"
+                            android:gravity="center"
+                            android:text="I WANT TO RESET MY ACCOUNT"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+                        <TextView
+                            android:id="@+id/tvNoLongerInterested"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_marginLeft="@dimen/forty"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_marginRight="@dimen/forty"
+                            android:background="@drawable/username_save_button"
+                            android:gravity="center"
+                            android:text="NO LONGER INTERESTED"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+                        <TextView
+                            android:id="@+id/tvQualityOfApp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_marginLeft="@dimen/forty"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_marginRight="@dimen/forty"
+                            android:background="@drawable/username_save_button"
+                            android:gravity="center"
+                            android:text="QUALITY OF APP"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+
+                        <TextView
+                            android:id="@+id/tvOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_marginLeft="@dimen/forty"
+                            android:layout_marginTop="@dimen/twelve"
+                            android:layout_marginRight="@dimen/forty"
+                            android:background="@drawable/username_save_button"
+                            android:gravity="center"
+                            android:text="OTHER"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+
+                        <TextView
+                            android:id="@+id/tvSave"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/fifty"
+                            android:layout_margin="@dimen/forty"
+                            android:background="@drawable/button2"
+                            android:gravity="center"
+                            android:text="Confirm"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/fifteen" />
+
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

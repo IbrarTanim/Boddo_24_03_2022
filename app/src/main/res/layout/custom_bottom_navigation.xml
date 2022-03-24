@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/botton_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/paddin_16dp"
+            android:paddingRight="@dimen/paddin_16dp">
+
+            <ImageView
+                android:id="@+id/nearby_image_view"
+                style="@style/nevigation_bar_style"
+                android:layout_weight="1"
+                android:padding="@dimen/paddin_6dp"
+                android:src="@drawable/ic_gallary" />
+
+            <ImageView
+                android:id="@+id/chatting_image_view"
+                style="@style/nevigation_bar_style"
+                android:layout_weight="1"
+                android:padding="@dimen/paddin_6dp"
+                android:src="@drawable/ic_chat_mono"
+                android:tint="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/chat_room_image_view"
+                style="@style/nevigation_bar_style"
+                android:layout_weight="1"
+                android:padding="@dimen/paddin_6dp"
+                android:src="@drawable/chatroom" />
+
+            <ImageView
+                android:id="@+id/notification_image_view"
+                style="@style/nevigation_bar_style"
+                android:layout_weight="1"
+                android:padding="@dimen/paddin_6dp"
+                android:src="@drawable/ic_notifications" />
+
+            <ImageView
+                android:id="@+id/profile_image_view"
+                style="@style/nevigation_bar_style"
+                android:layout_weight="1"
+                android:padding="@dimen/padding_8dp"
+                android:src="@drawable/man" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

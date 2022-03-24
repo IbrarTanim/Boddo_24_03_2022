@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llMainData"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/bg_hotlist_dialog"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:text="Info"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_marginLeft="@dimen/twenty"
+                android:layout_marginRight="@dimen/twenty"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="@dimen/three"
+                android:text="Current bid should be more than the previous one. Please try again."
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/fifteen" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnDialogMinimumBid"
+                android:layout_width="@dimen/two_hundrad"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:background="@drawable/button2"
+                android:text="Bid again"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="0.1" />
+
+            <Button
+                android:id="@+id/btnDialogMinimumBidCancel"
+                android:layout_width="@dimen/two_hundrad"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:layout_below="@+id/llMainData"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button2"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1" />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

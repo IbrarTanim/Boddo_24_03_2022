@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/twenty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/ic_close_9_6_2021"
+                android:drawablePadding="@dimen/thirty"
+                android:gravity="left|center"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/five"
+                android:background="@color/white"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/fifteen"
+                android:text="Where are you living?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sixteen"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tvClearLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:layout_weight="2"
+                    android:background="@color/transparent"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/cancel" />
+
+                <EditText
+                    android:id="@+id/edtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginLeft="@dimen/five"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="9"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="Write about you"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLines="3"
+                    android:minLines="6"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_marginRight="@dimen/five"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:text="50"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seventy"
+                android:layout_margin="@dimen/fifty"
+                android:background="@drawable/button2"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/twenty" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="5" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

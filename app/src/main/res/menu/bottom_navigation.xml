@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title=""
+        android:id="@+id/photo_blog_item"
+        android:icon="@drawable/ic_navigation_nearby_selected"/>
+    <item android:title=""
+        android:id="@+id/chat_item"
+        android:icon="@drawable/ic_chat_mono_color"/>
+    <item android:title=""
+        android:id="@+id/chat_room_item"
+        android:icon="@drawable/ic_megaphone"/>
+    <item android:title=""
+        android:id="@+id/noitification_item"
+        android:icon="@drawable/ic_navigation_activity_selected"/>
+    <item android:title=""
+        android:id="@+id/profile_item"
+        android:icon="@drawable/ic_man_user"/>
+</menu>

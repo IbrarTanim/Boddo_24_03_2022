@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="You have denied some permissions. Please accept all those permission to proceed..."
+        android:textAlignment="center"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/gray"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/permission_alert_title_bg"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Missing Permissions"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent" />
+
+</LinearLayout>

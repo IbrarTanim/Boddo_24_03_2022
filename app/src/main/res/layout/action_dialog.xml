@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:layout_margin="@dimen/ten"
+    app:cardCornerRadius="@dimen/twenty"
+    app:cardElevation="@dimen/ten"
+    app:strokeWidth="@dimen/one">
+
+    <LinearLayout
+        android:id="@+id/layout_country"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:gravity="left|bottom"
+            android:text="Action"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/eighteen"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:id="@+id/tvMenueAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Admin interface"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fifteen"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Don't waste your power!"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/twelve"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="Delete Message"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="0.2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="Kick"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="0.2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1"
+            android:background="@drawable/button2"
+            android:gravity="center"
+            android:text="Report"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fifteen"
+            android:textStyle="normal" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

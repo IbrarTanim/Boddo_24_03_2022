@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/twenty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/tvBackAddPhotoLow"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/back_icon_20_26_12_2020"
+                android:drawablePadding="@dimen/ten"
+                android:gravity="left|center"
+                android:text="Profile picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty" />
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+
+
+            <ImageView
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@color/transparent"
+                android:padding="@dimen/ten"
+                android:scaleType="fitCenter"
+                android:src="@drawable/active_profile_picture_30_3_2021" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_margin="@dimen/ten"
+            android:layout_weight="16"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="2"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/twenty"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/first_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:padding="1dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/profile_image2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/todo"
+                                android:longClickable="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/default_image_border"
+                                app:riv_corner_radius="@dimen/ten"
+                                app:riv_oval="false" />
+
+                            <ImageView
+                                android:id="@+id/asecond_image_delete"
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/delete_profile_picture_30_3_2021"
+                                android:visibility="visible" />
+                            
+                            <ImageView
+                                android:id="@+id/asecond_image_plus"
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/plus_icon"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:padding="1dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/profile_image3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:contentDescription="@string/todo"
+                                android:longClickable="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/default_image_border"
+                                app:riv_corner_radius="@dimen/ten"
+                                app:riv_oval="false" />
+
+                            <ImageView
+                                android:id="@+id/athird_image_delete"
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/delete_profile_picture_30_3_2021"
+                                android:visibility="gone" />
+                            
+
+                            <ImageView
+                                android:id="@+id/athird_image_plus"
+                                android:layout_width="@dimen/forty"
+                                android:layout_height="@dimen/forty"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/plus_icon"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/ten"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/afourth_image_pluse"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/plus_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/afourth_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+                        
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/ten"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/afifth_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+
+                       
+
+                        <ImageView
+                            android:id="@+id/afifth_image_plus"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/plus_icon"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/ten"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/asixth_image_plus"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/plus_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/asixth_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/zero"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/ten"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/aseventh_image_pluse"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/plus_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/aseventh_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/ten"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/aeighth_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+
+
+
+                        <ImageView
+                            android:id="@+id/aeighth_image_plus"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/plus_icon"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:padding="1dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/profile_image9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/todo"
+                            android:longClickable="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image_border"
+                            app:riv_corner_radius="@dimen/ten"
+                            app:riv_oval="false" />
+
+                        <ImageView
+                            android:id="@+id/anineth_image_pluse"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/plus_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/anineth_image_delete"
+                            android:layout_width="@dimen/forty"
+                            android:layout_height="@dimen/forty"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/delete_profile_picture_30_3_2021"
+                            android:visibility="gone" />
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/FooterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/five"
+            android:gravity="center"
+            android:text="Hold photos to change their order"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fifteen" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

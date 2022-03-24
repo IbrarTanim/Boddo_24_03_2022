@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color">
+
+    <View
+        android:id="@+id/blankView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/forty"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+
+    <LinearLayout
+        android:id="@+id/storyRlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/twenty"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/blankView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="1.5"
+            android:background="@color/content_bg_color"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1" />
+
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/ic_close_9_6_2021"
+                android:drawablePadding="@dimen/thirty"
+                android:gravity="left|center"
+                android:text="Hobbies"
+                android:textColor="@color/black"
+                android:textSize="@dimen/twenty" />
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero"
+            android:layout_weight="16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/five"
+                    android:background="@color/white"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/fifteen"
+                    android:text="What are your hobbies?"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sixteen"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+
+                <RadioGroup
+                    android:id="@+id/radios"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/five"
+                    android:layout_weight="15"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbNoResponse"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="No response"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+                    <RadioButton
+                        android:id="@+id/rbSports"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Sports"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+                    <RadioButton
+                        android:id="@+id/rbTourism"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Tourism"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+                    <RadioButton
+                        android:id="@+id/rbBlogging"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Blogging"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+                    <RadioButton
+                        android:id="@+id/rbDancing"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Dancing"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Reading"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbActing"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Acting"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbCooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Cooking"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbSinging"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Singing"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbGaming"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Gaming"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbCollecting"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Collecting"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbFashion"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Fashion"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                    <RadioButton
+                        android:id="@+id/rbCoding"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/seventy"
+                        android:layout_marginBottom="@dimen/one"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:layoutDirection="rtl"
+                        android:padding="5dp"
+                        android:text="Coding"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/fifteen" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/seventy"
+                    android:layout_margin="@dimen/fifty"
+                    android:background="@drawable/button2"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/twenty" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

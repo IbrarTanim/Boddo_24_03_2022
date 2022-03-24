@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llMainData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_hotlist_dialog"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Info"
+                android:textColor="@color/gray_light"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_below="@+id/title"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="@dimen/ten"
+                android:text="Your image is in review. Once it\'s approved, it will be available for other users."
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/fifteen" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnDialogOK"
+                android:layout_width="@dimen/hundrad"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:background="@drawable/app_color_bg"
+                android:text="It's OK"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="0.5" />
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

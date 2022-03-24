@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eceef0"
+    tools:context=".Activity.BlockListActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/button1"
+            android:orientation="horizontal">
+
+
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvBackBlockList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Blocked"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:drawablePadding="@dimen/fifteen"
+                android:drawableLeft="@drawable/back_icon_20_26_12_2020"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <!--<View
+        android:id="@+id/viewID"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/top"/>-->
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+       <androidx.core.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/size_30sp" />
+
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/block_recyclerView"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+               </androidx.recyclerview.widget.RecyclerView>
+
+
+           </LinearLayout>
+
+
+       </androidx.core.widget.NestedScrollView>
+
+
+
+            <TextView
+                android:id="@+id/not_visitor_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="Block List is Empty" />
+
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

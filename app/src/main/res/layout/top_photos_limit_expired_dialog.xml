@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ten"
+    app:cardCornerRadius="@dimen/twenty"
+    app:cardElevation="@dimen/ten"
+    app:strokeWidth="@dimen/one">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/twenty"
+        android:layout_marginRight="@dimen/twenty"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twenty"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/zero"
+                android:layout_weight="1"
+                android:gravity="left|bottom"
+                android:text="Action"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/eighteen"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten"
+                android:fontFamily="sans-serif-medium"
+                android:padding="@dimen/padding_8dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Find out all the top photos."
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/tvNormalInterfaceText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="You can see 10 top photos for free. To see them all activate Boddo Plus."
+                android:textColor="@color/gray"
+                android:textSize="@dimen/fifteen"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/discoverBoddo"
+                style="@style/Button.Primary.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:background="@drawable/button2"
+                android:gravity="center"
+                android:text="Discover Boddo Plus"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/button_decline"
+                style="@style/Button.Primary.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fifty"
+                android:layout_marginTop="@dimen/ten"
+                android:layout_marginBottom="@dimen/ten"
+                android:background="@drawable/button2"
+                android:gravity="center"
+                android:text="CANCEL"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

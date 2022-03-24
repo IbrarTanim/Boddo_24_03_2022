@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/delete_menu" android:title="Delete" android:icon="@drawable/ic_delete" app:showAsAction="never"/>
+    <item android:id="@+id/report_menu" android:title="Report" android:icon="@drawable/ic_error_white_24dp" android:iconTint="@color/black" app:showAsAction="never" />
+    <item android:id="@+id/privacy_menu" android:title="Privacy" app:showAsAction="never" >
+        <menu>
+            <item android:id="@+id/public_menu" android:title="Public" android:icon="@drawable/ic_public" />
+            <item android:id="@+id/private_menu" android:title="Private" android:icon="@drawable/ic_private"/>
+        </menu>
+    </item>
+
+
+</menu>

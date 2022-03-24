@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ten"
+    android:layout_marginRight="@dimen/ten"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0.0px"
+    android:elevation="5dp"
+    android:innerRadius="0dp"
+    app:cardCornerRadius="@dimen/ten"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/user_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rokan"
+            app:riv_corner_radius_top_left="@dimen/ten"
+            app:riv_corner_radius_top_right="@dimen/ten"
+            app:riv_oval="false" />
+
+        <TextView
+            android:id="@+id/userName_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_imageView"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom|center"
+            android:maxLines="1"
+            android:text="Abul Kasem"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            android:textSize="@dimen/twelve"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/credits_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userName_textView"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:padding="@dimen/five"
+            android:text="BID : 120 Credits"
+            android:textColor="@color/gray"
+            android:textSize="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_hotlist_numbers"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                />
+
+            <TextView
+                android:id="@+id/serial"
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="@id/user_imageView"
+                android:layout_alignParentTop="@id/user_imageView"
+                android:gravity="center"
+                android:text="10"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

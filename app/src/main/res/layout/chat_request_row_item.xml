@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="@dimen/paddin_4dp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/image_view_requested_user_photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="3dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/bg2"
+        app:civ_border_color="@color/red_100"
+        app:civ_border_width="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/text_view_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/text_view_requested_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="Ariful Haque"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/text_view_message"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_view_requested_user_name"
+            android:layout_marginTop="5dp"
+            android:text="Requested text"
+            android:textAppearance="?android:textAppearanceSmall" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/button_chat_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_8_dp"
+        android:background="@drawable/background_shep"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_8dp"
+        android:text="Accept"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/colorWhite" />
+</LinearLayout>

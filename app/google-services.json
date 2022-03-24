@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "529243573238",
+    "firebase_url": "https://boddo-e40c1.firebaseio.com",
+    "project_id": "boddo-e40c1",
+    "storage_bucket": "boddo-e40c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529243573238:android:e3b6579cbbc8c661fa15d7",
+        "android_client_info": {
+          "package_name": "net.boddo.btm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "529243573238-f7ct2i5rv4714r4n9c7ibov1jc22j5df.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeMDRDgi7HDmcqcLhoBe1MjFjpWv2HJtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529243573238-f7ct2i5rv4714r4n9c7ibov1jc22j5df.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

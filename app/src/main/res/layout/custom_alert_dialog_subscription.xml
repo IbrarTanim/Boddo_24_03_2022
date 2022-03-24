@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:padding="@dimen/padding_8dp"
+                    android:text="You have 0 palup credit.If you want to bid in hot list either you have to buy credits or you have to subscribe to palup plus."
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="12"
+                android:background="#f1f1f1">
+
+                <RadioGroup
+                    android:id="@+id/subscribe_RbGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/oneRB"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_pas"
+                        android:button="@color/transparent"
+                        android:elevation="8dp"
+                        android:gravity="center" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_pas"
+                        android:button="@color/transparent"
+                        android:elevation="8dp"
+
+                        android:textColor="@drawable/text_rb" />
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_pas"
+                        android:button="@color/transparent"
+                        android:elevation="8dp" />
+
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/month_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="12"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/medal_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/month_textView"
+                            android:layout_centerInParent="true"
+                            android:text="month"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/money_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/medal_textView"
+                            android:layout_centerInParent="true"
+                            android:text="BDT 400.00/mo"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/month2_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="3"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/medal2_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/month2_textView"
+                            android:layout_centerInParent="true"
+                            android:text="month"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/money2_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/medal2_textView"
+                            android:layout_centerInParent="true"
+                            android:text="BDT 700.00/mo"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/month3_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="1"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/medal3_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/month3_textView"
+                            android:layout_centerInParent="true"
+                            android:text="month"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/money3_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/medal3_textView"
+                            android:layout_centerInParent="true"
+                            android:text="BDT 1000.00/mo"
+                            android:textColor="@drawable/text_rb"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/subscribe_RbGroup"
+
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/button7"
+                    android:text="Continue"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textStyle="normal"
+
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

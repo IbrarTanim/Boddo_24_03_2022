@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+
+
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "net.boddo.btm"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 6
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        /*testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"*/
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:27.1.0'
+        }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'agency.tango.android:material-intro-screen:0.0.5'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.activity:activity:1.2.2'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    implementation 'ru.noties:scrollable:1.3.0'
+
+    //implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    /*implementation 'com.jakewharton:butterknife:9.0.0-rc1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-rc1'*/
+
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
+    implementation 'androidx.arch.core:core-runtime:2.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.badoualy:stepper-indicator:1.0.7'
+    implementation 'com.romandanylyk:pageindicatorview:1.0.2@aar'
+
+    //retrofit
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    //lotties
+    implementation 'com.airbnb.android:lottie:2.0.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.valdesekamdem.library:md-toast:0.9.0'
+    implementation 'am.appwise.components:NoInternetDialog:1.1.3'
+    //permissoins
+    implementation 'pub.devrel:easypermissions:2.0.0'
+    implementation 'com.squareup.okio:okio:1.7.0'
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    implementation 'jp.wasabeef:blurry:2.1.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+    implementation 'id.zelory:compressor:2.1.0'
+    //image
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.daasuu:BubbleLayout:1.2.0'
+    //zoom image
+
+    implementation"com.google.android.gms:play-services-gcm:16.0.0"
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    //added by sunny
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.daasuu:BubbleLayout:1.2.0'
+    implementation 'com.github.hani-momanii:SuperNova-Emoji:1.1'
+
+    //google pay
+//    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
+
+    //firebase
+    //implementation 'com.google.android.gms:play-services-vision:20.0.0'
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+    implementation 'com.google.firebase:firebase-ml-vision-barcode-model:16.1.1'
+
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+
+
+
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+
+    //implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //dialog box
+    implementation 'com.github.mjn1369:prettydialog:1.0.3'
+    implementation 'com.android.billingclient:billing:1.2'
+
+    //google ads
+    //implementation 'com.google.android.gms:play-services-ads:17.1.2'
+    //implementation 'com.google.android.gms:play-services-ads:19.6.0'
+
+
+    implementation 'com.nex3z:notification-badge:0.1.0'
+    implementation 'com.github.yatindeokar:MyLoadingButton:v1.0.1'
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.media2:media2-exoplayer:1.0.0-rc01'
+
+    implementation 'me.relex:circleindicator:2.1.6'
+
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+
+
+    //dialog plus
+    api 'com.orhanobut:logger:2.2.0'
+}
+apply plugin: 'com.google.gms.google-services'
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+
+    <RelativeLayout
+        android:id="@+id/titlrLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#96CC72">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send a picture"
+            android:padding="@dimen/five"
+            android:textSize="@dimen/fifteen"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@+id/titlrLayout"
+        android:layout_margin="10dp"/>
+</RelativeLayout>

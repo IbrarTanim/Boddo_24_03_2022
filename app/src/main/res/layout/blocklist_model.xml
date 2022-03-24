@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button1"
+        android:padding="@dimen/ten">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/ic_default_message_screen_profile_picture_04_11_2021" />
+
+        <TextView
+            android:id="@+id/block_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:text="parvez"
+            android:gravity="bottom"
+            android:textSize="@dimen/eighteen"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/block_user_last_message_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:layout_below="@+id/user_name"
+            android:text="3 days ago"
+            android:textSize="@dimen/ten"
+
+            android:textColor="@color/menu_icon_default_color" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_name"
+            android:layout_marginStart="10dp"
+            android:layout_below="@+id/block_user_name"
+            android:text="Abc"
+            android:gravity="start"
+            android:textSize="@dimen/twelve"
+            android:layout_toEndOf="@+id/profile_image"/>
+
+        <Button
+            android:id="@+id/unBlockButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/button2_pink"
+            android:text="Unblock"
+            android:padding="@dimen/ten"
+            android:layout_alignParentBottom="true"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:textSize="@dimen/ten" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

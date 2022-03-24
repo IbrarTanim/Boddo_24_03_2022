@@ -1,0 +1,27 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/month_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textSize="30sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/month_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Month"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/money_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BDT 700.00/mo"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+</merge>
