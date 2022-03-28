@@ -12,37 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white">
 
         <View
+            android:id="@+id/blankView"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@color/white"/>
+            android:layout_height="40dp"/>
 
         <LinearLayout
             android:id="@+id/top"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="?attr/actionBarSize"
             android:gravity="center_vertical"
-            android:background="@drawable/button1"
             android:orientation="horizontal">
-
-
-
-            <View
-                android:layout_width="15dp"
-                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tvBackBlockList"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Blocked"
-                android:textSize="18sp"
+                android:text="Back"
+                android:textSize="16sp"
                 android:gravity="center_vertical"
                 android:textStyle="bold"
-                android:drawablePadding="@dimen/fifteen"
-                android:drawableLeft="@drawable/back_icon_20_26_12_2020"/>
+                android:textColor="@color/black"
+                android:drawablePadding="@dimen/ten"
+                android:drawableStart="@drawable/back_icon_20_26_12_2020"
+                android:layout_marginStart="@dimen/ten"
+                android:background="?attr/selectableItemBackground"/>
 
         </LinearLayout>
 
@@ -65,42 +62,63 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar">
 
-       <androidx.core.widget.NestedScrollView
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:orientation="vertical">
 
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-               <View
-                   android:layout_width="match_parent"
-                   android:layout_height="@dimen/size_30sp" />
-
-               <androidx.recyclerview.widget.RecyclerView
-                   android:id="@+id/block_recyclerView"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent">
-
-               </androidx.recyclerview.widget.RecyclerView>
-
-
-           </LinearLayout>
-
-
-       </androidx.core.widget.NestedScrollView>
-
-
-
-            <TextView
-                android:id="@+id/not_visitor_view"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/block_recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:visibility="gone"
-                android:text="Block List is Empty" />
+                android:layout_marginTop="@dimen/thirty"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/not_block_view"
+                android:layout_marginTop="@dimen/sixty"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/empty_civ"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="40dp"/>
+
+                <TextView
+                    android:id="@+id/empty_header_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/empty_civ"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+                <TextView
+                    android:id="@+id/empty_body_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/empty_header_tv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/fifteen"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/twenty"
+                    app:layout_constraintTop_toBottomOf="@+id/empty_body_tv"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
 
 
 

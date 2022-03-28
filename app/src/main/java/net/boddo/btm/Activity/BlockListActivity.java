@@ -4,9 +4,12 @@ import android.os.Handler;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -20,19 +23,23 @@ import net.boddo.btm.Model.Blocklist;
 import net.boddo.btm.R;
 import net.boddo.btm.Utills.Constants;
 import net.boddo.btm.Utills.Data;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class BlockListActivity extends AppCompatActivity {
 
-    TextView notView,tvBackBlockList;
+    TextView tvBackBlockList;
     SwipeRefreshLayout swipeRefreshLayout;
 
-    List<Blocklist>blocklist;
+    List<Blocklist> blocklist;
     RecyclerView recyclerView;
     BlockListAdepter blockListAdepter;
-
+    ConstraintLayout notBlockedView;
+    CircleImageView emptyCIV;
+    TextView emptyHeaderTV, emptyBodyTV;
 
 
     @Override
@@ -40,13 +47,39 @@ public class BlockListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_block_list);
 
-        notView = findViewById(R.id.not_visitor_view);
         swipeRefreshLayout = findViewById(R.id.refreshLayout);
         recyclerView = findViewById(R.id.block_recyclerView);
         tvBackBlockList = findViewById(R.id.tvBackBlockList);
+        notBlockedView = findViewById(R.id.not_block_view);
+        emptyCIV = findViewById(R.id.empty_civ);
+        emptyHeaderTV = findViewById(R.id.empty_header_tv);
+        emptyBodyTV = findViewById(R.id.empty_body_tv);
 
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        /**
+         * Set
+         * Status
+         * Bar
+         * Size
+         * Start
+         * */
+        View blankView = findViewById(R.id.blankView);
+        int statusBarHeight = Data.STATUS_BAR_HEIGHT;
+        if (statusBarHeight != 0) {
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = statusBarHeight;
+            blankView.setLayoutParams(params);
+            //Log.e(TAG, "Status Bar Height: " + statusBarHeight );
+        }
+        /**
+         * Set
+         * Status
+         * Bar
+         * Size
+         * End
+         * */
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         getBlock();
 
 
@@ -61,7 +94,7 @@ public class BlockListActivity extends AppCompatActivity {
                     public void run() {
                         swipeRefreshLayout.setRefreshing(false);
                     }
-                },3000) ;
+                }, 3000);
             }
         });
 
@@ -78,27 +111,39 @@ public class BlockListActivity extends AppCompatActivity {
     private void getBlock() {
 
         ApiInterface apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
-        Call<List<Blocklist>>call = apiInterface.onBlocklist(Constants.SECRET_KEY, Data.userId);
+        Call<List<Blocklist>> call = apiInterface.onBlocklist(Constants.SECRET_KEY, Data.userId);
         call.enqueue(new Callback<List<Blocklist>>() {
             @Override
             public void onResponse(Call<List<Blocklist>> call, Response<List<Blocklist>> response) {
                 blocklist = response.body();
-                    if (blocklist.size() == 0) {
-                        recyclerView.setVisibility(View.GONE);
-                        notView.setVisibility(View.VISIBLE);
-                    } else {
-                        recyclerView.setVisibility(View.VISIBLE);
-                        notView.setVisibility(View.GONE);
-                    }
-                blockListAdepter = new BlockListAdepter(BlockListActivity.this,blocklist);
-                    recyclerView.setAdapter(blockListAdepter);
+                if (blocklist.size() == 0) {
+                    recyclerView.setVisibility(View.GONE);
+                    emptyCIV.setImageDrawable(ContextCompat.getDrawable(BlockListActivity.this, R.drawable.block));
+                    emptyHeaderTV.setText("No blocks yet.");
+                    notBlockedView.setVisibility(View.VISIBLE);
+                } else {
+                    recyclerView.setVisibility(View.VISIBLE);
+                    notBlockedView.setVisibility(View.GONE);
                 }
+                blockListAdepter = new BlockListAdepter(BlockListActivity.this, blocklist);
+                recyclerView.setAdapter(blockListAdepter);
+            }
+
             @Override
             public void onFailure(Call<List<Blocklist>> call, Throwable t) {
-
+                recyclerView.setVisibility(View.GONE);
+                emptyCIV.setImageDrawable(ContextCompat.getDrawable(BlockListActivity.this, R.drawable.block));
+                emptyHeaderTV.setText("No blocks yet.");
+                notBlockedView.setVisibility(View.VISIBLE);
             }
         });
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
