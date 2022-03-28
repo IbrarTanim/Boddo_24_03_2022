@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +33,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -44,7 +47,9 @@ public class FavoriteFragment extends Fragment {
     StaggeredGridLayoutManager layoutManager;
     ApiInterface apiInterface;
     LikeFavoriteAdepter likeFavoriteAdepter;
-    TextView noFavoriteView;
+    ConstraintLayout noFavoriteView;
+    CircleImageView emptyCIV;
+    TextView emptyHeaderTV, emptyBodyTV;
 
     public FavoriteFragment() {
         // Required empty public constructor
@@ -60,6 +65,9 @@ public class FavoriteFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_favorite, container, false);
 
         noFavoriteView = view.findViewById(R.id.not_favorite_view);
+        emptyCIV = view.findViewById(R.id.empty_civ);
+        emptyHeaderTV = view.findViewById(R.id.empty_header_tv);
+        emptyBodyTV = view.findViewById(R.id.empty_body_tv);
         favoriteRecyclerView = view.findViewById(R.id.favorite_recyclerView);
         swipeRefreshLayout = view.findViewById(R.id.refreshLayout);
         favoriteRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
@@ -92,6 +100,8 @@ public class FavoriteFragment extends Fragment {
 
                     if (likedMeList.size() == 0){
                         favoriteRecyclerView.setVisibility(View.GONE);
+                        emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_favorite));
+                        emptyHeaderTV.setText("No favourites yet.");
                         noFavoriteView.setVisibility(View.VISIBLE);
                     }else{
                         favoriteRecyclerView.setVisibility(View.VISIBLE);
@@ -102,11 +112,20 @@ public class FavoriteFragment extends Fragment {
                     favoriteRecyclerView.setLayoutManager(layoutManager);
                     likeFavoriteAdepter = new LikeFavoriteAdepter(getContext(), likedMeList,Constants.FAVORITE_VIEW_TYPE);
                     favoriteRecyclerView.setAdapter(likeFavoriteAdepter);
+                }else {
+                    favoriteRecyclerView.setVisibility(View.GONE);
+                    emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_favorite));
+                    emptyHeaderTV.setText("No favourites yet.");
+                    noFavoriteView.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
             public void onFailure(Call<Liked> call, Throwable t) {
+                favoriteRecyclerView.setVisibility(View.GONE);
+                emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_favorite));
+                emptyHeaderTV.setText("No favourites yet.");
+                noFavoriteView.setVisibility(View.VISIBLE);
             }
         });
     }

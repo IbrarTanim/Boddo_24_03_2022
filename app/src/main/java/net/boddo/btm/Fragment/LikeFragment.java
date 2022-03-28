@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +38,7 @@ import net.boddo.btm.Utills.ProgressDialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -49,7 +52,9 @@ public class LikeFragment extends Fragment {
 
     ApiInterface apiInterface;
     LikeFavoriteAdepter likeFavoriteAdepter;
-    TextView notlikeView;
+    ConstraintLayout notlikeView;
+    CircleImageView emptyCIV;
+    TextView emptyHeaderTV, emptyBodyTV;
     SwipeRefreshLayout swipeRefreshLayout;
     //rokan26.01.2021  private InterstitialAd mInterstitialAd;
     private static final String TAG = "destroy";
@@ -68,6 +73,9 @@ public class LikeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_like, container, false);
 
         notlikeView = view.findViewById(R.id.not_like_view);
+        emptyCIV = view.findViewById(R.id.empty_civ);
+        emptyHeaderTV = view.findViewById(R.id.empty_header_tv);
+        emptyBodyTV = view.findViewById(R.id.empty_body_tv);
         swipeRefreshLayout = view.findViewById(R.id.refreshLayout);
         likedMeList = new ArrayList<>();
         likeRecyclerView = view.findViewById(R.id.like_recyclerView);
@@ -98,8 +106,10 @@ public class LikeFragment extends Fragment {
                 likedMe = response.body();
                 if (likedMe.getStatus().equals("success")) {
                     likedMeList = likedMe.getLikedMe();
-                    if (likedMeList.size() == 0) {
+                    if (likedMeList == null || likedMeList.isEmpty()) {
                         likeRecyclerView.setVisibility(View.GONE);
+                        emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_like));
+                        emptyHeaderTV.setText("No likes yet.");
                         notlikeView.setVisibility(View.VISIBLE);
                     } else {
                         likeRecyclerView.setVisibility(View.VISIBLE);
@@ -110,11 +120,20 @@ public class LikeFragment extends Fragment {
                         likeFavoriteAdepter = new LikeFavoriteAdepter(getContext(), likedMeList, "like");
                         likeRecyclerView.setAdapter(likeFavoriteAdepter);
                     }
+                }else {
+                    likeRecyclerView.setVisibility(View.GONE);
+                    emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_like));
+                    emptyHeaderTV.setText("No likes yet.");
+                    notlikeView.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
             public void onFailure(Call<Liked> call, Throwable t) {
+                likeRecyclerView.setVisibility(View.GONE);
+                emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_like));
+                emptyHeaderTV.setText("No likes yet.");
+                notlikeView.setVisibility(View.VISIBLE);
             }
         });
     }

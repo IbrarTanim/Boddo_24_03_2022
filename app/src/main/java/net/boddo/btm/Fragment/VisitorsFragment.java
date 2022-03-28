@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +34,7 @@ import net.boddo.btm.Utills.Data;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -44,8 +47,10 @@ public class VisitorsFragment extends Fragment {
 
     ApiInterface apiInterface;
     LikeFavoriteAdepter likeFavoriteAdepter;
-    TextView notVisitorView;
     SwipeRefreshLayout swipeRefreshLayout;
+    ConstraintLayout notVisitorView;
+    CircleImageView emptyCIV;
+    TextView emptyHeaderTV, emptyBodyTV;
 
     public VisitorsFragment() {
         // Required empty public constructor
@@ -61,6 +66,9 @@ public class VisitorsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_visitors, container, false);
 
         notVisitorView = view.findViewById(R.id.not_visitor_view);
+        emptyCIV = view.findViewById(R.id.empty_civ);
+        emptyHeaderTV = view.findViewById(R.id.empty_header_tv);
+        emptyBodyTV = view.findViewById(R.id.empty_body_tv);
         swipeRefreshLayout = view.findViewById(R.id.refreshLayout);
         visitorRecyclerView = view.findViewById(R.id.visitor_recyclerView);
         visitorRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
@@ -95,6 +103,8 @@ public class VisitorsFragment extends Fragment {
 
                     if (likedMeList.size() == 0) {
                         visitorRecyclerView.setVisibility(View.GONE);
+                        emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_visitor));
+                        emptyHeaderTV.setText("No visitors yet.");
                         notVisitorView.setVisibility(View.VISIBLE);
                     } else {
                         visitorRecyclerView.setVisibility(View.VISIBLE);
@@ -104,12 +114,20 @@ public class VisitorsFragment extends Fragment {
                     visitorRecyclerView.setLayoutManager(layoutManager);
                     likeFavoriteAdepter = new LikeFavoriteAdepter(getContext(), likedMeList, "visitors");
                     visitorRecyclerView.setAdapter(likeFavoriteAdepter);
+                }else {
+                    visitorRecyclerView.setVisibility(View.GONE);
+                    emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_visitor));
+                    emptyHeaderTV.setText("No visitors yet.");
+                    notVisitorView.setVisibility(View.VISIBLE);
                 }
             }
 
             @Override
             public void onFailure(Call<Liked> call, Throwable t) {
-
+                visitorRecyclerView.setVisibility(View.GONE);
+                emptyCIV.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.activity_visitor));
+                emptyHeaderTV.setText("No visitors yet.");
+                notVisitorView.setVisibility(View.VISIBLE);
             }
         });
     }
