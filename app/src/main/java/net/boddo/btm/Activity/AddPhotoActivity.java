@@ -14,6 +14,7 @@ import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -175,6 +176,13 @@ public class AddPhotoActivity extends AppCompatActivity implements Constants, Ea
         if (actionBar != null) {
             actionBar.hide();
         }*/
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
+
 
         asecondImagePlus.setVisibility(View.VISIBLE);
         athirdImagePlus.setVisibility(View.VISIBLE);

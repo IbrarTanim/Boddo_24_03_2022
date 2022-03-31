@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/llMenueBar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
         android:paddingTop="@dimen/five"
         android:paddingBottom="@dimen/five"
@@ -29,10 +29,10 @@
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/ten"
             android:drawableStart="@drawable/back_icon_20_26_12_2020"
-            android:drawablePadding="@dimen/five"
+            android:drawablePadding="@dimen/ten"
             android:gravity="center"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

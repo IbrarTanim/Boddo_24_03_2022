@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,6 +56,13 @@ public class ChatRoomAllUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_room_all_user);
         ButterKnife.bind(this);
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
 
         tvBackChatRoomAllUser = findViewById(R.id.tvBackChatRoomAllUser);
         tvBackChatRoomAllUser.setOnClickListener(new View.OnClickListener() {

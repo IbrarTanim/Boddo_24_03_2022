@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -48,6 +49,13 @@ public class EyeColorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eye_color);
         activity = this;
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
 
         ButterKnife.bind(this);
         if (!Data.userEyeColor.equals("")) {

@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -89,6 +90,13 @@ public class OthersProfileOneActivity extends AppCompatActivity implements View.
         setContentView(R.layout.activity_others_profile_one);
         activity = this;
         ButterKnife.bind(this);
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
 
         imageViewPager = findViewById(R.id.profile_image_view_pagerOthers);
         firstNameAndUserName = findViewById(R.id.text_view_first_name_and_user_nameOthers);

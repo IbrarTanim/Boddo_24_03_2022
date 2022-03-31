@@ -16,35 +16,29 @@
     <LinearLayout
         android:id="@+id/storyRlMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/twenty"
+        android:layout_height="@dimen/zero"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/blankView">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/zero"
-            android:layout_weight="1.5"
+            android:layout_height="?attr/actionBarSize"
             android:background="@color/content_bg_color"
             android:orientation="horizontal">
 
-            <View
-                android:layout_width="@dimen/zero"
-                android:layout_height="match_parent"
-                android:layout_weight="0.1" />
-
             <TextView
                 android:id="@+id/tvBack"
-                android:layout_width="@dimen/zero"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
                 android:drawableLeft="@drawable/ic_close_9_6_2021"
-                android:drawablePadding="@dimen/thirty"
+                android:drawablePadding="@dimen/ten"
                 android:gravity="left|center"
                 android:text="Profession"
                 android:textColor="@color/black"
-                android:textSize="@dimen/twenty" />
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/ten"
+                android:background="?attr/selectableItemBackground"/>
 
 
         </LinearLayout>

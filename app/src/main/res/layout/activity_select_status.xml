@@ -35,15 +35,16 @@
             <TextView
                 android:id="@+id/tvBackSettings"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:drawablePadding="@dimen/ten"
                 android:text="Status"
                 android:textColor="@color/black"
-                android:layout_marginStart="@dimen/fifteen"
+                android:layout_marginStart="@dimen/ten"
                 android:drawableStart="@drawable/back_icon_20_26_12_2020"
-                android:padding="@dimen/ten"
-                android:textSize="20sp" />
+                android:textSize="16sp"
+                android:background="?attr/selectableItemBackground"/>
 
 
         </LinearLayout>

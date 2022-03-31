@@ -89,6 +89,14 @@ public class MyBlogPhotoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_blog_photo);
         activity = this;
         ButterKnife.bind(this);
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
+
         //getAllImageList();
 
         ivCameraMyBlogPhoto = findViewById(R.id.ivCameraMyBlogPhoto);

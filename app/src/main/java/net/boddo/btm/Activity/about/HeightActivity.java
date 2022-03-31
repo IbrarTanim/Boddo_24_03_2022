@@ -45,9 +45,9 @@ public class HeightActivity extends AppCompatActivity {
         npHeight = findViewById(R.id.npHeight);
         npHeight.setMinValue(140);
         npHeight.setMaxValue(220);
-        if (Data.userHeight != null || !Data.userHeight.equals("")) {
+        /*if (Data.userHeight != null || !Data.userHeight.equals("")) {
             npHeight.setValue(Integer.parseInt(Data.userHeight));
-        }
+        }*/
         npHeight.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {

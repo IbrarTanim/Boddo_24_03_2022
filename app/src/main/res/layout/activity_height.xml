@@ -35,13 +35,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/ten"
-                android:drawablePadding="@dimen/thirty"
+                android:drawablePadding="@dimen/ten"
                 android:text="Height"
                 android:textColor="@color/black"
                 android:background="?attr/selectableItemBackground"
                 android:drawableStart="@drawable/ic_close_9_6_2021"
                 android:gravity="center"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
 
         </LinearLayout>

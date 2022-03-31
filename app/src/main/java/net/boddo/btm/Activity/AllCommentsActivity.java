@@ -115,7 +115,7 @@ public class AllCommentsActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if (s.length() == 0) {
                     Log.e("Textcount", "onTextChanged: "+s.length() );
-                    Toast.makeText(getApplicationContext(), "closeKeyBoard", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "closeKeyBoard", Toast.LENGTH_SHORT).show();
                    // closeKeyBoard();
                     submitButton.setVisibility(View.GONE);
                     submitButtonTouch.setVisibility(View.VISIBLE);

@@ -11,14 +11,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/forty"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <RelativeLayout
         android:id="@+id/storyRlMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/thirty"
-        app:layout_constraintTop_toBottomOf="@+id/blankView">
+        android:layout_height="@dimen/zero"
+        app:layout_constraintTop_toBottomOf="@+id/blankView"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,8 +28,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/zero"
-                android:layout_weight="1.5"
+                android:layout_height="?attr/actionBarSize"
                 android:background="@color/content_bg_color"
                 android:orientation="horizontal">
 
@@ -42,7 +41,7 @@
                     android:drawableLeft="@drawable/back_icon_20_26_12_2020"
                     android:drawablePadding="@dimen/ten"
                     android:gravity="left|center"
-                    android:textSize="@dimen/twenty"
+                    android:textSize="16sp"
                     android:text="Salam's Profile"
                     android:textColor="@color/black" />
 

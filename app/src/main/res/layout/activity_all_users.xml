@@ -15,8 +15,7 @@
     <RelativeLayout
         android:id="@+id/storyRlMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/twenty"
+        android:layout_height="@dimen/zero"
         android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/blankView">
 
@@ -28,29 +27,22 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/zero"
-                android:layout_weight="1.5"
+                android:layout_height="?attr/actionBarSize"
                 android:background="@color/content_bg_color"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tvBackActiveAllUsers"
-                    android:layout_width="@dimen/zero"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="@dimen/ten"
-                    android:layout_weight="2"
-                    android:drawableLeft="@drawable/back_icon_20_26_12_2020"
+                    android:layout_marginStart="@dimen/ten"
+                    android:drawableStart="@drawable/back_icon_20_26_12_2020"
                     android:drawablePadding="@dimen/ten"
                     android:gravity="left|center"
                     android:text="Discover"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/twenty" />
-
-
-                <View
-                    android:layout_width="@dimen/zero"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5" />
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground" />
 
 
             </LinearLayout>

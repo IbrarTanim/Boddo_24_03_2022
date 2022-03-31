@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -88,6 +89,14 @@ public class ChatRoomActivity extends AppCompatActivity {
 
         activity = this;
         ButterKnife.bind(this);
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
+
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
@@ -203,8 +212,6 @@ public class ChatRoomActivity extends AppCompatActivity {
     }
 
 
-
-
     //Farabi
     private void checkAlreadySubscribeForGlobal() {
         apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
@@ -252,8 +259,6 @@ public class ChatRoomActivity extends AppCompatActivity {
                         insufficientCredits();
                         isSubscribedInGlobal = 0;
                     }
-
-
 
 
                 }

@@ -11,21 +11,20 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/forty"
         android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/storyRlMain" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
         android:id="@+id/storyRlMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/thirty"
+        android:layout_height="@dimen/zero"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/blankView">
+        app:layout_constraintTop_toBottomOf="@+id/blankView"
+        app:layout_constraintBottom_toBottomOf="parent">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/zero"
-            android:layout_weight="1.5"
+            android:layout_height="?attr/actionBarSize"
             android:background="@color/content_bg_color"
             android:orientation="horizontal">
 
@@ -46,7 +45,7 @@
                 android:gravity="left|center"
                 android:text="New Post"
                 android:textColor="@color/black"
-                android:textSize="@dimen/twenty" />
+                android:textSize="16sp" />
 
 
             <ImageButton
@@ -54,7 +53,7 @@
                 android:layout_width="@dimen/twenty_five"
                 android:layout_height="@dimen/twenty_five"
                 android:layout_gravity="center"
-                android:layout_marginRight="@dimen/fifteen"
+                android:layout_marginEnd="@dimen/ten"
                 android:background="@color/transparent"
                 android:padding="@dimen/ten"
                 android:src="@drawable/cancel_icon_16_02_2021" />
@@ -69,8 +68,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/zero"
-            android:layout_weight="3"
-            android:background="@color/content_bg_color">
+            android:layout_weight="4"
+            android:background="@color/content_bg_color"
+            android:gravity="center">
 
 
             <View
@@ -82,19 +82,20 @@
             <TextView
                 android:id="@+id/ibtnPicImage"
                 android:layout_width="@dimen/zero"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:drawableTop="@drawable/gallery_icon_16_02_2021"
                 android:gravity="center"
                 android:padding="@dimen/seven"
                 android:text="Gallery"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
 
 
             <TextView
                 android:id="@+id/ibtnCaptureImage"
                 android:layout_width="@dimen/zero"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="3"
                 android:drawableTop="@drawable/camera_icon_16_02_2021"
                 android:gravity="center"

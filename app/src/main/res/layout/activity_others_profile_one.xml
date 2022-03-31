@@ -38,24 +38,33 @@
                             android:layout_height="match_parent"
                             android:layout_marginBottom="@dimen/hundrad" />
 
+                        <View
+                            android:id="@+id/blankView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/forty"
+                            android:background="@color/transparent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
                         <LinearLayout
                             android:id="@+id/llBck"
                             android:layout_width="@dimen/eighty"
                             android:layout_height="@dimen/forty"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginTop="@dimen/thirty"
-                            android:orientation="horizontal">
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@id/blankView"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/five">
 
                             <ImageView
                                 android:id="@+id/ivBackOthersActivity"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:paddingTop="@dimen/ten"
-                                android:paddingRight="@dimen/ten"
+                                android:paddingEnd="@dimen/ten"
                                 android:paddingBottom="@dimen/ten"
                                 android:scaleType="fitCenter"
-                                android:src="@drawable/ic_cross_icon_01_08_2021" />
+                                android:src="@drawable/ic_cross_icon_01_08_2021"
+                                android:background="?attr/selectableItemBackground"/>
 
                         </LinearLayout>
 
@@ -63,22 +72,23 @@
                             android:id="@+id/image_indicator_others"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
                             android:layout_centerInParent="true"
-                            android:layout_marginTop="@dimen/thirty"
+                            android:layout_below="@id/blankView"
                             app:piv_animationType="drop"
                             app:piv_dynamicCount="true"
                             app:piv_interactiveAnimation="true"
                             app:piv_selectedColor="@color/app_color"
                             app:piv_unselectedColor="@color/white"
-                            app:piv_viewPager="@id/profile_image_view_pagerOthers" />
+                            app:piv_viewPager="@id/profile_image_view_pagerOthers"
+                            android:layout_marginTop="@dimen/five" />
 
                         <LinearLayout
                             android:id="@+id/llOthersProfileMenue"
                             android:layout_width="@dimen/eighty"
                             android:layout_height="@dimen/forty"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginTop="@dimen/thirty">
+                            android:layout_below="@id/blankView"
+                            android:layout_marginTop="@dimen/five">
 
                             <ImageView
                                 android:layout_width="match_parent"
@@ -94,9 +104,10 @@
                             android:id="@+id/llName"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/forty"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginLeft="@dimen/ten"
-                            android:layout_marginTop="@dimen/seventy"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/llBck"
+                            android:layout_marginStart="@dimen/ten"
+                            android:layout_marginTop="@dimen/ten"
                             android:background="@drawable/bg_rounded_black_transparent"
                             android:orientation="horizontal">
 
@@ -120,8 +131,8 @@
                             android:id="@+id/genderUser"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/forty"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginLeft="@dimen/ten"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/ten"
                             android:background="@drawable/bg_rounded_black_transparent"
                             android:orientation="horizontal">
 
@@ -144,7 +155,7 @@
                             android:layout_width="@dimen/eighty"
                             android:layout_height="@dimen/forty"
                             android:layout_below="@+id/genderUser"
-                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
                             android:layout_marginLeft="@dimen/ten"
                             android:layout_marginRight="@dimen/ten"
                             android:background="@drawable/bg_rounded_black_transparent"

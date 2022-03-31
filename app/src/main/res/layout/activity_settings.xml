@@ -17,7 +17,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/llMenueBar"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
         android:paddingTop="@dimen/five"
         android:paddingBottom="@dimen/five"
@@ -27,17 +27,16 @@
 
         <TextView
             android:id="@+id/tvBackSettings"
-            android:layout_width="@dimen/zero"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/ten"
-            android:layout_weight="2"
             android:background="?attr/selectableItemBackground"
             android:drawableStart="@drawable/back_icon_20_26_12_2020"
             android:drawablePadding="@dimen/ten"
             android:gravity="center"
             android:text="Settings"
             android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

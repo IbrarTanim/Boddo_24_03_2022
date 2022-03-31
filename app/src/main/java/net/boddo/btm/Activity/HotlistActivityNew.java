@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -74,6 +75,13 @@ public class HotlistActivityNew extends AppCompatActivity implements HotlistDial
         setContentView(R.layout.activity_hotlist_new);
         activity = this;
         ButterKnife.bind(this);
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
 
         //This code use for hide keyboard when start activity..
         getWindow().setSoftInputMode(

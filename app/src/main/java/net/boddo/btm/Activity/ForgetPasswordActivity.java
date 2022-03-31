@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ import net.boddo.btm.Callbacks.ApiClient;
 import net.boddo.btm.Callbacks.ApiInterface;
 import net.boddo.btm.R;
 import net.boddo.btm.Utills.Constants;
+import net.boddo.btm.Utills.Data;
 import net.boddo.btm.Utills.Helper;
 
 import butterknife.BindView;
@@ -53,9 +55,12 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         activity = this;
         ButterKnife.bind(this);
 
-        //Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
-        /*getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
 
         ivBackResetPassword = findViewById(R.id.ivBackResetPassword);
         ivBackResetPassword.setOnClickListener(new View.OnClickListener() {

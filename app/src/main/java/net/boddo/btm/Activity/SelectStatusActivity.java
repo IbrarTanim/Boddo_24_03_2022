@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import net.boddo.btm.Adepter.SelectStatusAdepter;
 import net.boddo.btm.Model.SelectStatusModel;
 import net.boddo.btm.R;
+import net.boddo.btm.Utills.Data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +29,13 @@ public class SelectStatusActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_status);
+
+        if (Data.STATUS_BAR_HEIGHT != 0) {
+            View blankView = findViewById(R.id.blankView);
+            ViewGroup.LayoutParams params = blankView.getLayoutParams();
+            params.height = Data.STATUS_BAR_HEIGHT;
+            blankView.setLayoutParams(params);
+        }
 
         rvSelectStatusActivity = findViewById(R.id.rvSelectStatusActivity);
         tvBackSettings = findViewById(R.id.tvBackSettings);

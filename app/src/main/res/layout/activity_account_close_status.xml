@@ -42,7 +42,7 @@
                 android:gravity="left|center"
                 android:text="Account status"
                 android:textColor="@color/black"
-                android:textSize="@dimen/fifteen" />
+                android:textSize="16sp" />
 
 
             <ImageView
