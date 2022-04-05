@@ -239,6 +239,18 @@ public class PrivateChatActivity extends AppCompatActivity {
             layout_footer.setVisibility(View.GONE);
             final PrettyDialog myBlockDialog = new PrettyDialog(this);
             myBlockDialog.setContentView(R.layout.blocked_user);
+            Button blockedListBTN = myBlockDialog.findViewById(R.id.BtnBlockedList);
+            Button cancelBTN = myBlockDialog.findViewById(R.id.button_decline);
+            if (cancelBTN != null){
+                cancelBTN.setOnClickListener(view1 -> {
+                    myBlockDialog.dismiss();
+                });
+            }
+            if (blockedListBTN != null){
+                blockedListBTN.setOnClickListener(view1 -> {
+                    startActivity(new Intent(PrivateChatActivity.this, BlockListActivity.class));
+                });
+            }
             myBlockDialog.setIcon(R.drawable.logo1).setIconTint(R.color.colorPrimary).setMessage(" You have  Blocked this user")
                     .setMessageColor(R.color.red_A700).addButton("Cancel", R.color.white, R.color.colorPrimary, new PrettyDialogCallback() {
                 @Override

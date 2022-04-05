@@ -135,9 +135,9 @@ public class AllUsersActivity extends AppCompatActivity {
     }
 
     private void searchAction() {
-        Data.pd = new ProgressDialog(this);
-        Data.pd.setTitle("Please Wait...");
-        Data.pd.show();
+        //Data.pd = new ProgressDialog(this);
+        //Data.pd.setTitle("Please Wait...");
+        //Data.pd.show();
         recyclerView.setVisibility(View.GONE);
         final String query = editTextSearch.getText().toString().trim();
         if (!query.equals("")) {
@@ -148,7 +148,7 @@ public class AllUsersActivity extends AppCompatActivity {
                     GsonBuilder gsonBuilder = new GsonBuilder();
                     Gson gson = gsonBuilder.create();
                     AllUser[] allUsers = gson.fromJson(response, AllUser[].class);
-                    progressBar.setVisibility(View.GONE);
+                    //progressBar.setVisibility(View.GONE);
                     recyclerView.setVisibility(View.VISIBLE);
 
                     layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
@@ -175,7 +175,7 @@ public class AllUsersActivity extends AppCompatActivity {
             queue.add(request);
 
 
-            Data.pd.dismiss();
+            //Data.pd.dismiss();
         } else {
             Toast.makeText(this, "Please fill search input", Toast.LENGTH_SHORT).show();
         }
