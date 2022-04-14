@@ -165,11 +165,6 @@ public class BirthdateFragment extends Fragment {
                 dateOfBirth.setText(dayOfMonth + "/" + current_month + "/" + year);
                 age = dayOfMonth + "/" + current_month + "/" + year;
                 bAge = year+""+current_month+""+dayOfMonth;
-
-
-
-
-
             }
         }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         datePickerDialog.show();
@@ -208,7 +203,7 @@ public class BirthdateFragment extends Fragment {
 
 
 
-        if(ageCalculate <18){
+        if(ageCalculate < 18){
             Toast.makeText(getContext(), "You have to be 18+ to use Boddo", Toast.LENGTH_SHORT).show();
             loadingDialog.hideDialog();
             return;
@@ -217,16 +212,17 @@ public class BirthdateFragment extends Fragment {
 
         if (!age.equals("")) {
             Log.e("age", "onJoinButtonClicked: "+age );
-            if (Helper.isNetworkAvailable(getActivity())) {
+            new LoginAsync().execute();
+            indicator.setCurrentStep(6);
+            /*if (Helper.isNetworkAvailable(getActivity())) {
                 if (Helper.internetIsConnected()) {
-                    new LoginAsync().execute();
-                    indicator.setCurrentStep(6);
+                    // here
                 } else {
                     Toast.makeText(getActivity(), "No Internet Access.", Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(getActivity(), "No internet connection.", Toast.LENGTH_SHORT).show();
-            }
+            }*/
         } else {
             Toast.makeText(getActivity(), "Please select your date of birth", Toast.LENGTH_SHORT).show();
         }
