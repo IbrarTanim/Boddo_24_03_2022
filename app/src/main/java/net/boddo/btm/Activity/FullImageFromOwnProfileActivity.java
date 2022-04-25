@@ -421,7 +421,7 @@ public class FullImageFromOwnProfileActivity extends AppCompatActivity implement
         tvUserName.setText("@" + Data.userName);
         likeCountTextView.setText(detailsOfPhotoBlogImage.getLike());
         messageCountTextView.setText(detailsOfPhotoBlogImage.getComment());
-        totalMatchedCount.setText(detailsOfPhotoBlogImage.getMatched());
+        totalMatchedCount.setText(detailsOfPhotoBlogImage.getViews());
         amountOfLikes = Integer.parseInt(detailsOfPhotoBlogImage.getLike());
         photoId = Integer.parseInt(detailsOfPhotoBlogImage.getId());
         description.setText(detailsOfPhotoBlogImage.getDescription());

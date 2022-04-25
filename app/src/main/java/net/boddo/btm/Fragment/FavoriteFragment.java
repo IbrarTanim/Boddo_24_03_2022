@@ -30,6 +30,8 @@ import net.boddo.btm.Utills.Data;
 import net.boddo.btm.Utills.ProgressDialog;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.List;
 
@@ -129,14 +131,14 @@ public class FavoriteFragment extends Fragment {
             }
         });
     }
-    @Override
+    /*@Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if (isVisibleToUser) {
             //Todo update ui
             getAllfavourite();
         }
-    }
+    }*/
 
     @Override
     public void onDestroy() {
@@ -150,5 +152,27 @@ public class FavoriteFragment extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
         this.context = context;
+        if (!EventBus.getDefault().isRegistered(this))
+            EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        if (EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().unregister(this);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(Event event) {
+        if (event.getEventType().equals(Constants.UNLOCK_FAVORITE_IMAGE)) {
+            getAllfavourite();
+        }
+        if (event.getEventType().equals(Constants.LIKE_FAV_VISITOR)|| event.getEventType().equals(Constants.LIKE_FAV_SHOW)){
+
+            getAllfavourite();
+        }
+
     }
 }

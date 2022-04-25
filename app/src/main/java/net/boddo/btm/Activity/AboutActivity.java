@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import net.boddo.btm.Activity.Settings.SettingsActivity;
 import net.boddo.btm.R;
 import net.boddo.btm.Utills.Data;
 
@@ -127,6 +129,14 @@ public class AboutActivity extends AppCompatActivity {
                 Intent browserLinkedIn = new Intent(Intent.ACTION_VIEW,Uri.parse(
                         "https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join"));
                 startActivity(browserLinkedIn);
+            }
+        });
+
+        TextView tvBackSettings = findViewById(R.id.tvBackSettings);
+        tvBackSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

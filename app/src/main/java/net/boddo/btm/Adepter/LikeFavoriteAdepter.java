@@ -231,6 +231,7 @@ public class LikeFavoriteAdepter extends RecyclerView.Adapter<LikeFavoriteAdepte
 
 
     public void interestedToDialog(final LoveFavoriteViewHolder holder, final int position) {
+        Log.e("TAG", "other id: " + likedMeList.get(position).getUserId() );
         final Dialog dialog = new Dialog(context);
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.setContentView(R.layout.interested_to_dialog);

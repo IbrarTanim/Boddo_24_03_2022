@@ -182,6 +182,8 @@ public class MyBlogPhotoActivity extends AppCompatActivity {
         call.enqueue(new Callback<UserPhotoBlogImages[]>() {
             @Override
             public void onResponse(Call<UserPhotoBlogImages[]> call, Response<UserPhotoBlogImages[]> response) {
+
+                Log.e("Response now", Data.userId);
                 userPhotoBlogImages = response.body();
 
                 /*Calendar calendar = Calendar.getInstance(Locale.getDefault());

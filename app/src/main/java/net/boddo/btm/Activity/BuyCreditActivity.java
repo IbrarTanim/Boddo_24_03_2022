@@ -178,6 +178,13 @@ public class BuyCreditActivity extends AppCompatActivity {
         //finish();
     }
 
+    public void goBackFromTransaction(){
+        intent = new Intent(activity, SettingsActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
+
     private void setFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
